@@ -7,6 +7,19 @@ import javax.persistence.Entity;
 import java.util.HashSet;
 
 public class Driver extends User {
+	public Driver() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Driver(String firstName, String lastName, int age, String email, String phoneNumber, String gender,
+			String address, String userName, int accountNumber, Car car) {
+		super(firstName, lastName, age, email, phoneNumber, gender, address, userName);
+		this.accountNumber = accountNumber;
+		this.car = car;
+		// TODO Auto-generated constructor stub
+	}
+
 	private int accountNumber;
 
 	public void setAccountNumber(int value) {

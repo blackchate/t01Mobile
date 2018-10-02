@@ -4,6 +4,18 @@ import java.util.Set;
 import java.util.HashSet;
 
 public class Passenger extends User {
+public Passenger() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Passenger(String firstName, String lastName, int age, String email, String phoneNumber, String gender,
+			String address, String userName, String creditCardNumber) {
+		super(firstName, lastName, age, email, phoneNumber, gender, address, userName);
+		this.creditCardNumber = creditCardNumber;
+		// TODO Auto-generated constructor stub
+	}
+
 private String creditCardNumber;
 
 public void setCreditCardNumber(String value) {
