@@ -268,9 +268,6 @@
     <attributes xmi:id="_4mgVkMUUEeiPk6wHWDzjBA" name="car">
       <modelElement href="rideshare-v1.uml#_4mcrMMUUEeiPk6wHWDzjBA"/>
       <stereotypes xmi:id="_DgahkMUZEeiPk6wHWDzjBA" name="StyledElement"/>
-      <stereotypes xmi:id="_EI4DIMXyEeizB_eF9s7zvw" name="StyledElement"/>
-      <stereotypes xmi:id="_EI7tgMXyEeizB_eF9s7zvw" name="StyledElement"/>
-      <stereotypes xmi:id="_EJMMMMXyEeizB_eF9s7zvw" name="StyledElement"/>
       <visibility xmi:id="_4mgVkcUUEeiPk6wHWDzjBA" label="+"/>
       <cardinality xmi:id="_4mgVksUUEeiPk6wHWDzjBA" label="1" max="1" min="1"/>
       <type xmi:id="_4mgVk8UUEeiPk6wHWDzjBA" name="Car">
@@ -280,9 +277,6 @@
     <attributes xmi:id="__ofxoMUUEeiPk6wHWDzjBA" name="trip">
       <modelElement href="rideshare-v1.uml#__obgMcUUEeiPk6wHWDzjBA"/>
       <stereotypes xmi:id="_DgjrgMUZEeiPk6wHWDzjBA" name="StyledElement"/>
-      <stereotypes xmi:id="_EI_X4MXyEeizB_eF9s7zvw" name="StyledElement"/>
-      <stereotypes xmi:id="_EJDpUMXyEeizB_eF9s7zvw" name="StyledElement"/>
-      <stereotypes xmi:id="_EJNaUMXyEeizB_eF9s7zvw" name="StyledElement"/>
       <visibility xmi:id="__ofxocUUEeiPk6wHWDzjBA" label="+"/>
       <cardinality xmi:id="__ofxosUUEeiPk6wHWDzjBA" label="*" max="-1"/>
       <type xmi:id="__ofxo8UUEeiPk6wHWDzjBA" name="Trip">
