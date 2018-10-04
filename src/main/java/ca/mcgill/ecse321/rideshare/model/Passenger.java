@@ -4,6 +4,9 @@ import java.util.Set;
 import java.util.HashSet;
 
 public class Passenger extends User {
+	
+	SpecificRating specificRating;
+	
 public Passenger() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -14,6 +17,7 @@ public Passenger() {
 		super(firstName, lastName, age, email, phoneNumber, gender, address, userName);
 		this.creditCardNumber = creditCardNumber;
 		// TODO Auto-generated constructor stub
+		// TODO: ADD PASSENGER RATING FOR SPECIFIC TRIP IN CONSTRUCTOR
 	}
 
 private String creditCardNumber;

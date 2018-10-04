@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import ca.mcgill.ecse321.rideshare.model.Car;
+import ca.mcgill.ecse321.rideshare.model.Driver;
 import ca.mcgill.ecse321.rideshare.model.Passenger;
 
 @Service
@@ -33,7 +34,26 @@ public class PassengerService {
 		passengers.add(passenger);
 	}
 	
-	public void deletePassenger(String username) {
+	public void updatePassenger(String username, Passenger passenger) {
+		for(int i = 0; i < passengers.size(); i++) {
+			Passenger p = passengers.get(i);
+			if(p.getUserName().equals(username)) {
+				passengers.set(i, passenger);
+				return;
+			} // TODO: else create new user with that username 
+		}
+	}
+	
+	public Passenger deletePassenger(String username) {
+		Passenger passengerToRemove = null;
+		for(int i = 0; i < passengers.size(); i++) {
+			Passenger d = passengers.get(i);
+			if(d.getUserName().equals(username)) {
+				passengerToRemove = passengers.get(i);
+				break;
+			}
+		}
 		passengers.removeIf(u -> u.getUserName().equals(username));
+		return passengerToRemove;
 	}
 }

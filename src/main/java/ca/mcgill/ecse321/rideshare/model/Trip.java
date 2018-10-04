@@ -4,6 +4,10 @@ import java.util.Set;
 import java.util.HashSet;
 
 public class Trip {
+	
+// association class with Rating
+SpecificRating specificRating;
+	
 private String date;
 
 public void setDate(String value) {

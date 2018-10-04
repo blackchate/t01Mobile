@@ -9,6 +9,7 @@ import java.util.HashSet;
 
 @Entity
 public class User {
+	private boolean isActice;
 	private String firstName;
 	private String lastName;
 	private int age;
@@ -113,6 +114,16 @@ public class User {
 
 	public String getUserName() {
 		return this.userName;
+	}
+
+
+	public boolean isActice() {
+		return isActice;
+	}
+
+
+	public void setActice(boolean isActice) {
+		this.isActice = isActice;
 	}
 
 }
