@@ -13,8 +13,8 @@ public class Driver extends User {
 	}
 
 	public Driver(String firstName, String lastName, int age, String email, String phoneNumber, String gender,
-			String address, String userName, int accountNumber, Car car) {
-		super(firstName, lastName, age, email, phoneNumber, gender, address, userName);
+			String address, String userName, boolean isActive, int accountNumber, Car car) {
+		super(firstName, lastName, age, email, phoneNumber, gender, address, userName, isActive);
 		this.accountNumber = accountNumber;
 		this.car = car;
 		// TODO Auto-generated constructor stub

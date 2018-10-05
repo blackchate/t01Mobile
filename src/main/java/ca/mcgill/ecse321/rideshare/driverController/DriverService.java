@@ -15,11 +15,11 @@ public class DriverService {
 	Car car1 = new Car();
 	private List<Driver> drivers = new ArrayList<>(Arrays.asList( // new ArrayList so that drivers list is mutable
 			new Driver("Driver1", "ddsdsds", 2, "donat@test.com", "01233445", "Alien",
-					"Mars", "myUsername", 55, car1),
+					"Mars", "myUsername", true, 55, car1),
 			new Driver("Driver2", "Lassdfadtname2", 55, "test@test.com", "555555", "Earthling",
-					"Earth", "another username", 66, car1),
+					"Earth", "another username", true, 66, car1),
 			new Driver("Driver3", "ssssssss", 901, "earth@test.com", "01233445", "Earthling",
-					"Pacific Ocean", "sdfd", 77, car1)
+					"Pacific Ocean", "sdfd", false, 77, car1)
 			));
 	
 	public List<Driver> getAllDrivers() {

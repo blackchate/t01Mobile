@@ -15,11 +15,11 @@ public class UsersService {
 	
 	private List<User> users = new ArrayList<>(Arrays.asList(
 			new User("Donat", "Kapesa", 2, "donat@test.com", "01233445", "Alien",
-					"Mars", "myUsername"),
+					"Mars", "myUsername", true),
 			new User("User2", "Lastname2", 55, "test@test.com", "555555", "Earthling",
-					"Earth", "another username"),
+					"Earth", "another username", true),
 			new User("earthling2", "lastname3", 901, "earth@test.com", "01233445", "Earthling",
-					"Pacific Ocean", "username3")
+					"Pacific Ocean", "username3", true)
 			));
 	
 	public List<User> getAllUsers() {

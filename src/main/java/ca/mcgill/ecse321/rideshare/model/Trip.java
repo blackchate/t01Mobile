@@ -4,11 +4,42 @@ import java.util.Set;
 import java.util.HashSet;
 
 public class Trip {
+
+public Trip() {
 	
+}
+	
+public Trip(String date, String pickUpLocation, String destination, //SpecificRating specificRating, 
+			String pickUpTime, String arrivalTime, int availableSeats, boolean isComplete, double fare,
+			Integer estimatedTripDuration, int driverRating, int passengerRating, int distance,
+			Set<Passenger> passenger, Driver driver) {
+		super();
+//		this.specificRating = specificRating;
+		this.date = date;
+		this.pickUpLocation = pickUpLocation;
+		this.destination = destination;
+		this.pickUpTime = pickUpTime;
+		this.arrivalTime = arrivalTime;
+		this.availableSeats = availableSeats;
+		this.isComplete = isComplete;
+		this.fare = fare;
+		this.estimatedTripDuration = estimatedTripDuration;
+		this.driverRating = driverRating;
+		this.passengerRating = passengerRating;
+		this.distance = distance;
+		this.passenger = passenger;
+		this.driver = driver;
+		
+		this.id++; // Increment Id everytime a new trip instance is created
+		// TODO: Make sure when I do list.add, this still works
+	}
+
 // association class with Rating
 SpecificRating specificRating;
-	
+
 private String date;
+
+private static int id; // will be unique for each Trip
 
 public void setDate(String value) {
    this.date = value;
@@ -74,7 +105,7 @@ public void setIsComplete(boolean value) {
    this.isComplete = value;
 }
 
-public boolean isIsComplete() {
+public boolean getIsComplete() {
    return this.isComplete;
 }
 

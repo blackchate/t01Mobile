@@ -15,11 +15,11 @@ public class PassengerService {
 	Car car1 = new Car();
 	private List<Passenger> passengers = new ArrayList<>(Arrays.asList(
 			new Passenger("Driver1", "ddsdsds", 2, "donat@test.com", "01233445", "Alien",
-					"Mars", "myUsername", "55555555555"),
+					"Mars", "myUsername", true, "55555555555"),
 			new Passenger("Driver2", "Lassdfadtname2", 55, "test@test.com", "555555", "Earthling",
-					"Earth", "another username", "7777777777777"),
+					"Earth", "another username", true, "7777777777777"),
 			new Passenger("Driver3", "ssssssss", 901, "earth@test.com", "01233445", "Earthling",
-					"Pacific Ocean", "sdfd", "8888888888888")
+					"Pacific Ocean", "sdfd", true, "8888888888888")
 			));
 	
 	public List<Passenger> getAllPassengers() {

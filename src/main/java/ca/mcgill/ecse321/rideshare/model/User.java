@@ -21,7 +21,7 @@ public class User {
 	private String userName;
 	
 	public User(String firstName, String lastName, int age, String email, String phoneNumber, String gender,
-			String address, String userName) {  //,Set<UserRole> userRole
+			String address, String userName, boolean isActive) {  //,Set<UserRole> userRole
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -31,6 +31,7 @@ public class User {
 		this.gender = gender;
 		this.address = address;
 		this.userName = userName;
+		this.isActice = isActive;
 //		this.userRole = userRole;
 	}
 

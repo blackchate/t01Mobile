@@ -13,8 +13,8 @@ public Passenger() {
 	}
 
 	public Passenger(String firstName, String lastName, int age, String email, String phoneNumber, String gender,
-			String address, String userName, String creditCardNumber) {
-		super(firstName, lastName, age, email, phoneNumber, gender, address, userName);
+			String address, String userName, boolean isActive, String creditCardNumber) {
+		super(firstName, lastName, age, email, phoneNumber, gender, address, userName, isActive);
 		this.creditCardNumber = creditCardNumber;
 		// TODO Auto-generated constructor stub
 		// TODO: ADD PASSENGER RATING FOR SPECIFIC TRIP IN CONSTRUCTOR
