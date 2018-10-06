@@ -12,12 +12,20 @@ public class Driver extends User {
 		// TODO Auto-generated constructor stub
 	}
 
+	//Constructor of driver should not have a car
 	public Driver(String firstName, String lastName, int age, String email, String phoneNumber, String gender,
 			String address, String userName, boolean isActive, int accountNumber, Car car) {
 		super(firstName, lastName, age, email, phoneNumber, gender, address, userName, isActive);
 		this.accountNumber = accountNumber;
 		this.car = car;
 		// TODO Auto-generated constructor stub
+	}
+	//constructor without car
+	public Driver(String firstName, String lastName, int age, String email, String phoneNumber, String gender,
+			String address, String userName, boolean isActive, int accountNumber) {
+		super(firstName, lastName, age, email, phoneNumber, gender, address, userName, isActive);
+		this.accountNumber = accountNumber;
+		
 	}
 
 	private int accountNumber;

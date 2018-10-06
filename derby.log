@@ -1,13 +1,13 @@
 ----------------------------------------------------------------
-Thu Oct 04 20:04:16 EDT 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0166-418a-0396-00000708b998 
-on database directory memory:/Users/donatkapesa/Desktop/GitHub/School/ECSE 321/Project/workspace/t01/testdb with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
-Loaded from file:/Users/donatkapesa/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+Sat Oct 06 13:08:09 EDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0166-4a59-c4f1-000006499be8 
+on database directory memory:/Users/bariscincik/Desktop/ecse321/rideshare/t01/testdb with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
+Loaded from file:/Users/bariscincik/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_161-b12
-user.dir=/Users/donatkapesa/Desktop/GitHub/School/ECSE 321/Project/workspace/t01
+java.runtime.version=1.8.0_131-b11
+user.dir=/Users/bariscincik/Desktop/ecse321/rideshare/t01
 os.name=Mac OS X
 os.arch=x86_64
-os.version=10.13.6
+os.version=10.12.6
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''

@@ -2,6 +2,22 @@ package ca.mcgill.ecse321.rideshare.model;
 
 
 public class Car {
+	
+	
+	
+	//empty constructor
+	public Car() {
+		
+	}
+	
+	
+	//constructor
+public Car(int registrationNumber, Driver driver) {
+		super();
+		this.registrationNumber = registrationNumber;
+		this.driver = driver;
+	}
+
 private int registrationNumber;
 
 public void setRegistrationNumber(int value) {

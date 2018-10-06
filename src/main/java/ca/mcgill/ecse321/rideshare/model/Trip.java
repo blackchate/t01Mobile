@@ -9,6 +9,7 @@ public Trip() {
 	
 }
 	
+//This constructor has too many args. most of these arguments aren't neccessary when making a driver object
 public Trip(String date, String pickUpLocation, String destination, //SpecificRating specificRating, 
 			String pickUpTime, String arrivalTime, int availableSeats, boolean isComplete, double fare,
 			Integer estimatedTripDuration, int driverRating, int passengerRating, int distance,
@@ -30,16 +31,41 @@ public Trip(String date, String pickUpLocation, String destination, //SpecificRa
 		this.passenger = passenger;
 		this.driver = driver;
 		
-		this.id++; // Increment Id everytime a new trip instance is created
+		this.tripId++; // Increment Id everytime a new trip instance is created
 		// TODO: Make sure when I do list.add, this still works
 	}
 
+
+
 // association class with Rating
-SpecificRating specificRating;
+//SpecificRating specificRating;
+
+public Trip(String pickUpLocation, String destination, String pickUpTime, int availableSeats, double fare,
+		Driver driver, int tripId) {
+	super();
+	this.pickUpLocation = pickUpLocation;
+	this.destination = destination;
+	this.pickUpTime = pickUpTime;
+	this.availableSeats = availableSeats;
+	this.fare = fare;
+	this.driver = driver;
+	
+	this.tripId = tripId;
+	
+	//HERE you can calculate the remaining fields like estimatedTripDuration etc, using the fields above
+	//Also a unique id will be generated here, for now I'll put it in the constructor itself
+	
+}
+
+
+
 
 private String date;
 
-private static int id; // will be unique for each Trip
+private static int tripId; // will be unique for each Trip
+public int getTripId() {
+	return this.tripId;
+}
 
 public void setDate(String value) {
    this.date = value;

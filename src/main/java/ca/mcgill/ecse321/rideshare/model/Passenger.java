@@ -5,7 +5,7 @@ import java.util.HashSet;
 
 public class Passenger extends User {
 	
-	SpecificRating specificRating;
+//	SpecificRating specificRating;
 	
 public Passenger() {
 		super();
