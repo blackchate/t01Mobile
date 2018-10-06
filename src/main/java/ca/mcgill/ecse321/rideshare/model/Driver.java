@@ -3,10 +3,14 @@ package ca.mcgill.ecse321.rideshare.model;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import java.util.HashSet;
 
+//@Entity 
+
 public class Driver extends User {
+	
 	public Driver() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -19,7 +23,8 @@ public class Driver extends User {
 		this.car = car;
 		// TODO Auto-generated constructor stub
 	}
-
+	
+	@Id
 	private int accountNumber;
 
 	public void setAccountNumber(int value) {

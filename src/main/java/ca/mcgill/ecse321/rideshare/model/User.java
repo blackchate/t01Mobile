@@ -9,7 +9,7 @@ import java.util.HashSet;
 
 @Entity
 public class User {
-	private boolean isActice;
+	private boolean isActive;
 	private String firstName;
 	private String lastName;
 	private int age;
@@ -19,6 +19,7 @@ public class User {
 	private String address;
 	@Id
 	private String userName;
+	//private String userRole;
 	
 	public User(String firstName, String lastName, int age, String email, String phoneNumber, String gender,
 			String address, String userName, boolean isActive) {  //,Set<UserRole> userRole
@@ -31,8 +32,8 @@ public class User {
 		this.gender = gender;
 		this.address = address;
 		this.userName = userName;
-		this.isActice = isActive;
-//		this.userRole = userRole;
+		this.isActive = isActive;
+		//this.userRole = userRole;
 	}
 
 
@@ -56,8 +57,6 @@ public class User {
 	public String getLastName() {
 		return this.lastName;
 	}
-
-	
 
 	public void setAge(int value) {
 		this.age = value;
@@ -118,13 +117,13 @@ public class User {
 	}
 
 
-	public boolean isActice() {
-		return isActice;
+	public boolean isActive() {
+		return isActive;
 	}
 
 
-	public void setActice(boolean isActice) {
-		this.isActice = isActice;
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
 	}
 
 }

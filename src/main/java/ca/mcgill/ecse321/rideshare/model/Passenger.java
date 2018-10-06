@@ -1,6 +1,9 @@
 package ca.mcgill.ecse321.rideshare.model;
 
 import java.util.Set;
+
+import javax.persistence.Id;
+
 import java.util.HashSet;
 
 public class Passenger extends User {
@@ -20,6 +23,7 @@ public Passenger() {
 		// TODO: ADD PASSENGER RATING FOR SPECIFIC TRIP IN CONSTRUCTOR
 	}
 
+	@Id
 private String creditCardNumber;
 
 public void setCreditCardNumber(String value) {

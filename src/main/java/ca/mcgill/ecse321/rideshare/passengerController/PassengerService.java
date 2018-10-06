@@ -1,4 +1,4 @@
-package ca.mcgill.ecse321.rideshare.passengerController;
+/*package ca.mcgill.ecse321.rideshare.passengerController;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -57,3 +57,4 @@ public class PassengerService {
 		return passengerToRemove;
 	}
 }
+*/

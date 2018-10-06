@@ -1,8 +1,9 @@
 // TODO: There has to be a way to put all this inside User class instead of having it inside Drivers, Passengers and System Admins right?
 
-package ca.mcgill.ecse321.rideshare.driverController;
+/*package ca.mcgill.ecse321.rideshare.driverController;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,7 +26,7 @@ public class DriverController {
 	}
 	
 	@RequestMapping("/drivers/{username}")
-	public Driver getDriver(@PathVariable String username) {
+	public Optional<Driver> getDriver(@PathVariable String username) {
 		return driverService.getDriver(username);
 		
 	}
@@ -37,7 +38,7 @@ public class DriverController {
 	
 	@RequestMapping(method=RequestMethod.PUT, value = "/drivers/{username}")
 	public Driver updateDriver(@RequestBody Driver driver, @PathVariable String username) {
-		Driver oldDriver = driverService.getDriver(username); // null if no driver at that username yet
+		Optional<Driver> oldDriver = driverService.getDriver(username); // null if no driver at that username yet
 		driverService.updateDriver(username, driver);
 		return driver;
 	}
@@ -45,10 +46,11 @@ public class DriverController {
 	
 	@RequestMapping(method=RequestMethod.DELETE, value = "/drivers/{username}")
 	public String deleteDriver(@PathVariable String username) { // TODO: if There's no driver to remove, return custom message
-		Driver returnedValue = driverService.deleteDriver(username);
+		String returnedValue = driverService.deleteDriver(username);
 		if(returnedValue == null) {
 			return "THERE IS NO DRIVER WITH THAT USERNAME TO DELETE";
 		}
 		return "YOU DELETED A DRIVER";
 	}
 }
+*/

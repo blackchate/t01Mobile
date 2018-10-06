@@ -1,4 +1,4 @@
-package ca.mcgill.ecse321.rideshare.passengerController;
+/*package ca.mcgill.ecse321.rideshare.passengerController;
 
 import java.util.List;
 
@@ -19,4 +19,4 @@ public class PassengerController {
 		return passengerService.getAllPassengers();
 	}
 	
-}
+}*/
