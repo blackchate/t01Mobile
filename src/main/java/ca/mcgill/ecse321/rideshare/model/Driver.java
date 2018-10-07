@@ -3,10 +3,33 @@ package ca.mcgill.ecse321.rideshare.model;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 
 import java.util.HashSet;
 
+@Table(name = "driverInfo")
 public class Driver extends User {
+	
+	@Id
+	@GeneratedValue(generator = "driver_generator")
+	@SequenceGenerator(
+			name = "driver_generator",
+			sequenceName = "driver_sequence",
+			initialValue = 1000
+			)
+	private Long id;
+	
+	@Id
+	private int accountNumber;
+	@Column(columnDefinition = "trip")
+	private Set<Trip> trip;
+	@Column(columnDefinition = "car")
+	private Car car;
+	
 	public Driver() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -28,7 +51,6 @@ public class Driver extends User {
 		
 	}
 
-	private int accountNumber;
 
 	public void setAccountNumber(int value) {
 		this.accountNumber = value;
@@ -45,7 +67,7 @@ public class Driver extends User {
 	 *           driver        &lt;       car
 	 * </pre>
 	 */
-	private Car car;
+	
 
 	public void setCar(Car value) {
 		this.car = value;
@@ -62,7 +84,7 @@ public class Driver extends User {
 	 *           driver        &lt;       trip
 	 * </pre>
 	 */
-	private Set<Trip> trip;
+	
 
 	public Set<Trip> getTrip() {
 		if (this.trip == null) {

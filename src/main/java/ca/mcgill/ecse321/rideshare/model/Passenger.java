@@ -1,9 +1,27 @@
 package ca.mcgill.ecse321.rideshare.model;
 
 import java.util.Set;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
 import java.util.HashSet;
 
+
+@Table(name = "passenger_info")
 public class Passenger extends User {
+	
+	
+	@Id
+	@GeneratedValue(generator = "passenger_generator")
+	@SequenceGenerator(
+			name = "passenger_generator",
+			sequenceName = "passenger_sequence",
+			initialValue  = 1000
+			)
+	private Long id;
 	
 //	SpecificRating specificRating;
 	
@@ -21,6 +39,7 @@ public Passenger() {
 	}
 
 private String creditCardNumber;
+private Set<Trip> trip;
 
 public void setCreditCardNumber(String value) {
    this.creditCardNumber = value;
@@ -37,7 +56,7 @@ public String getCreditCardNumber() {
  *           passenger        &lt;       trip
  * </pre>
  */
-private Set<Trip> trip;
+
 
 public Set<Trip> getTrip() {
    if (this.trip == null) {

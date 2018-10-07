@@ -5,50 +5,39 @@ package ca.mcgill.ecse321.rideshare.driverController;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import javax.validation.Valid;
+
+
 import ca.mcgill.ecse321.rideshare.model.Driver;
+import ca.mcgill.ecse321.rideshare.model.User;
+import ca.mcgill.ecse321.rideshare.repo.DriverRepository;
 
 @RestController
 public class DriverController {
 
 	@Autowired
-	private DriverService driverService;
+	private DriverRepository driverRepo;
 	
-	@RequestMapping("/drivers")
-	public List<Driver> getAllDrivers() {
-		return driverService.getAllDrivers(); // TODO: If null, show a message
+	@GetMapping("/users/drivers")
+	public Page<User> getAllDrivers(Pageable pageable) { 
+		return driverRepo.findAll(pageable); // TODO: If null, show a message
 	}
 	
-	@RequestMapping("/drivers/{username}")
-	public Driver getDriver(@PathVariable String username) {
-		return driverService.getDriver(username);
-		
+	@PostMapping("/users/drivers")
+	public Driver createDriver(@Valid @RequestBody Driver driver) {
+		return driverRepo.save(driver);
 	}
-	
-	@RequestMapping(method=RequestMethod.POST, value = "/drivers")
-	public void addDriver(@RequestBody Driver driver) {
-		driverService.addDriver(driver);
-	}
-	
-	@RequestMapping(method=RequestMethod.PUT, value = "/drivers/{username}")
-	public Driver updateDriver(@RequestBody Driver driver, @PathVariable String username) {
-		Driver oldDriver = driverService.getDriver(username); // null if no driver at that username yet
-		driverService.updateDriver(username, driver);
-		return driver;
-	}
-	// TODO: add ability to change username
-	
-	@RequestMapping(method=RequestMethod.DELETE, value = "/drivers/{username}")
-	public String deleteDriver(@PathVariable String username) { // TODO: if There's no driver to remove, return custom message
-		Driver returnedValue = driverService.deleteDriver(username);
-		if(returnedValue == null) {
-			return "THERE IS NO DRIVER WITH THAT USERNAME TO DELETE";
-		}
-		return "YOU DELETED A DRIVER";
-	}
+
 }
