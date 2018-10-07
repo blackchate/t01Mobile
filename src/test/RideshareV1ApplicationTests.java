@@ -74,20 +74,69 @@ public class RideshareV1ApplicationTests {
 	private UsersService uservice;
 
 
-	//ADMIN getAllTrips, getAllActiveUsers, getAllActiveTrips
+	//ADMIN getAllTrips, getAllActiveUsers, getAllActiveTrips============================================================//
 	private static final String ADMIN_KEY = "TestAdmin";
 	private static final String NONEXISTING_ADMINKEY = "NotAnAdmin";
+	//admin model required*
 
 
-	//DRIVER getAllDrivers, getDriver
+	//DRIVER *getAllDrivers, getDriver===================================================================================//
 	private static final String DRIVER_KEY = "TestDriver";
 	private static final String NONEXISTING_DRIVERKEY = "NotADriver";
 
-	//PASSENGER  getAllPassengers, getPassenger
+	@BeforeEach
+	void setMockOutput() {
+  		when(DriverDao.getDriver(anyString())).thenAnswer( (InvocationOnMock invocation) -> {
+    		if(invocation.getArgument(0).equals(DRIVER_KEY)) {
+      			Driver driver = new Driver();
+      			driver.setName(DRIVER_KEY);
+      			return driver;
+    			} 
+    		else {
+      			return null;
+    			}
+  			});
+		}
+
+	@Test
+	public void testDriverQueryFound() {
+  		assertEquals(dcontrol.getUser(DRIVER_KEY), DRIVER_KEY);
+	}
+
+	@Test
+	public void testDriverQueryNotFound() {
+  		assertEquals(dcontrol.getDriver(NONEXISTING_DRIVERKEY), DriverController.ERROR_NOT_FOUND_MESSAGE);
+	}
+
+	//PASSENGER  *getAllPassengers, getPassenger========================================================================//
 	private static final String PASSENGER_KEY = "TestPassenger";
 	private static final String NONEXISTING_PASSENGERKEY = "NotAPassenger";
 
-	//USER getAllUsers, getUser
+	@BeforeEach
+	void setMockOutput() {
+  		when(PassengerDao.getPassenger(anyString())).thenAnswer( (InvocationOnMock invocation) -> {
+    		if(invocation.getArgument(0).equals(PASSENGER_KEY)) {
+      			Passenger passenger = new Passenger();
+      			passenger.setName(PASSENGER_KEY);
+      			return passenger;
+    			} 
+    		else {
+      			return null;
+    			}
+  			});
+		}
+
+	@Test
+	public void testPassengerQueryFound() {
+  		assertEquals(pcontrol.getUser(PASSENGER_KEY), PASSENGER_KEY);
+	}
+
+	@Test
+	public void testPassengerQueryNotFound() {
+  		assertEquals(pcontrol.getUser(NONEXISTING_PASSENGERKEY), PassengerController.ERROR_NOT_FOUND_MESSAGE);
+	}
+
+	//USER *getAllUsers, getUser=======================================================================================//
 
 	private static final String USER_KEY = "TestUser";
 	private static final String NONEXISTING_USERKEY = "NotAUser";
