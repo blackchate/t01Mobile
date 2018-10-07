@@ -14,7 +14,7 @@ import ca.mcgill.ecse321.rideshare.model.User;
 public class UsersService {
 	
 	private List<User> users = new ArrayList<>(Arrays.asList(
-			new User("Donat", "Kapesa", 2, "donat@test.com", "01233445", "Alien",
+			new User("DonatTT", "Kapesa", 2, "donat@test.com", "01233445", "Alien",
 					"Mars", "myUsername", true),
 			new User("User2", "Lastname2", 55, "test@test.com", "555555", "Earthling",
 					"Earth", "another username", true),

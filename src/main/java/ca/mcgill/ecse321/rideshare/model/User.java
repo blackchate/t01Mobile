@@ -4,20 +4,45 @@ import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 
 import java.util.HashSet;
 
 @Entity
-public class User {
-	private boolean isActice;
-	private String firstName;
-	private String lastName;
-	private int age;
-	private String email;
-	private String phoneNumber;
-	private String gender;
-	private String address;
+@Table(name = "userInfo")    //specify the table for this class
+public class User extends AuditModel {
+	
 	@Id
+    @GeneratedValue(generator = "user_generator")
+	//this sequence generator will generate random primary key values for the table "userInfo" .
+    @SequenceGenerator(
+            name = "user_generator",
+            sequenceName = "user_sequence",                  
+            initialValue = 1000
+    )   
+	private Long id;   //stores the above primary key
+	
+	
+	@Column(columnDefinition = "is_active")
+	private boolean isActice;
+	@Column(columnDefinition = "first_name")
+	private String firstName;
+	@Column(columnDefinition = "last_name")
+	private String lastName;
+	@Column(columnDefinition = "age")
+	private int age;
+	@Column(columnDefinition = "email")
+	private String email;
+	@Column(columnDefinition = "phone_num")
+	private String phoneNumber;
+	@Column(columnDefinition = "gender")
+	private String gender;
+	@Column(columnDefinition = "address")
+	private String address;
+//	@Id
 	private String userName;
 	
 	public User(String firstName, String lastName, int age, String email, String phoneNumber, String gender,
