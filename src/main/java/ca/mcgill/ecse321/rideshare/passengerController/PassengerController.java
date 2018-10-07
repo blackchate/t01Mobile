@@ -3,8 +3,12 @@ package ca.mcgill.ecse321.rideshare.passengerController;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
 
 import ca.mcgill.ecse321.rideshare.model.Passenger;
 
@@ -33,7 +37,7 @@ public class PassengerController {
 	@RequestMapping(method=RequestMethod.PUT, value = "/passengers/{username}")
 	public Passenger updatePassenger(@RequestBody Passenger passenger, @PathVariable String username) {
 		Passenger oldPassenger = passengerService.getPassenger(username); // null if no passenger with that username yet
-		passengerService.updatePassenger(username, driver);
+		passengerService.updatePassenger(username, passenger);
 		return passenger;
 	}
 
