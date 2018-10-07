@@ -30,7 +30,7 @@ public class PassengerService {
 		return passengers.stream().filter(u -> u.getUserName().equals(username)).findFirst().get();
 	}
 	
-	public void addDriver(Passenger passenger) {
+	public void addPassenger(Passenger passenger) {
 		passengers.add(passenger);
 	}
 	

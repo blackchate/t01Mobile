@@ -18,5 +18,32 @@ public class PassengerController {
 	public List<Passenger> getAllPassengers() {
 		return passengerService.getAllPassengers();
 	}
+
+	@RequestMapping("/passengers/{username}")
+	public Passenger getPassenger(@PathVariable String username) {
+		return passengerService.getPassenger(username);
+		
+	}
+
+	@RequestMapping(method=RequestMethod.POST, value = "/passengers")
+	public void addPassenger(@RequestBody Passenger passenger) {
+		passengerService.addPassenger(passenger);
+	}
+	
+	@RequestMapping(method=RequestMethod.PUT, value = "/passengers/{username}")
+	public Passenger updatePassenger(@RequestBody Passenger passenger, @PathVariable String username) {
+		Passenger oldPassenger = passengerService.getPassenger(username); // null if no passenger with that username yet
+		passengerService.updatePassenger(username, driver);
+		return passenger;
+	}
+
+	@RequestMapping(method=RequestMethod.DELETE, value = "/passengers/{username}")
+	public String deletePassenger(@PathVariable String username) { // TODO: if There's no passenger to remove, return custom message
+		Passenger returnedValue = passengerService.deletePassenger(username);
+		if(returnedValue == null) {
+			return "THERE IS NO PASSENGER WITH THAT USERNAME TO DELETE";
+		}
+		return "YOU DELETED A PASSENGER";
+	}
 	
 }
