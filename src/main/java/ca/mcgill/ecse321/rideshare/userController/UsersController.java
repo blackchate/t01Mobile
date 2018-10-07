@@ -22,6 +22,7 @@ public class UsersController {
 		return "This is Donat's REST API. Browse safe"; 
 	}
 	
+	
 	@RequestMapping("/users")
 	public List<User> getAllUsers() {
 		return usersService.getAllUsers();
