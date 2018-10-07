@@ -31,8 +31,6 @@ import ca.mcgill.ecse321.rideshare.adminoperationscontroller.AdminOperationsServ
 import ca.mcgill.ecse321.rideshare.passengercontroller.PassengerController;
 import ca.mcgill.ecse321.rideshare.passengercontroller.PassengerService;
 
-
-
 //model (lines can be reduced later, for now just for readibility)
 import ca.mcgill.ecse321.rideshare.model.Car;
 import ca.mcgill.ecse321.rideshare.model.Driver;
@@ -41,14 +39,8 @@ import ca.mcgill.ecse321.rideshare.model.SpecificRating;
 import ca.mcgill.ecse321.rideshare.model.Trip;
 import ca.mcgill.ecse321.rideshare.model.User;
 
-
-
-
-
-
 //repo
 import ca.mcgill.ecse321.rideshare.repo.Repository; //Repository.java
-
 
 //static imports for methods
 import static org.junit.Assert.assertEquals;
@@ -64,8 +56,13 @@ public class RideshareV1ApplicationTests {
 	//@BeforeClass before Test Case class (used if @test has lots of methods)
 	//@AfterClass after ...
 
+	//create mocks for Car, Dricer, Passenfer, SpecificRating, Trip, User
+
+	
+
+	//test cases
 	@Test
-	public void contextLoads() throws Exception{
+	public void contextLoads() throws Exception{ //placeholder
 
 	}
 
