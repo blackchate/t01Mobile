@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import ca.mcgill.ecse321.rideshare.model.Trip;
 
 @RestController
+
 public class AdminOperationsController {
 	@Autowired
 	private AdminOperationsService adminOpService;
