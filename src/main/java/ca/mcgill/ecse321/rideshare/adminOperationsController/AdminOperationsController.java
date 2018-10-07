@@ -35,6 +35,7 @@ public class AdminOperationsController {
 	}
 	
 //	@RequestMapping("/admin/operations/trips/active")
+	
 //	public List<Trip> getActiveTrips() {
 //		return adminOpService.getAllActiveTrips();
 //	}
