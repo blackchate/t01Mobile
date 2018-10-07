@@ -108,12 +108,12 @@ public class RideshareV1ApplicationTests {
 
 	@Test
 	public void testUserQueryFound() {
-  		assertEquals(controller.queryParticipant(USER_KEY), USER_KEY);
+  		assertEquals(ucontrol.getUser(USER_KEY), USER_KEY);
 	}
 
 	@Test
 	public void testUserQueryNotFound() {
-  		assertEquals(controller.queryParticipant(NONEXISTING_USERKEY), EventRegistrationController.ERROR_NOT_FOUND_MESSAGE);
+  		assertEquals(ucontrol.getUser(NONEXISTING_USERKEY), UsersController.ERROR_NOT_FOUND_MESSAGE);
 	}
 
 }

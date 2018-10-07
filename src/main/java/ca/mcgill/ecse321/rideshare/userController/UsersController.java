@@ -30,7 +30,7 @@ public class UsersController {
 
 	
 	@RequestMapping("/users/{username}")
-	public User getUser(@Pathvariable String username){
+	public User getUser(@PathVariable String username){
 		return usersService.getUser(username);
 	}
 	
