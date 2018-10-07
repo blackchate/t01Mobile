@@ -63,7 +63,6 @@ public class RideshareV1ApplicationTests {
 	@Mock
 	private Repository carDao, DriverDao, PassengerDao, SpecificRatingDao, TripDao, UserDao;
 
-
 	@InjectMocks 
 	private AdminOperationsController admincontrol;
 	private AdminOperationsService adminservice;
