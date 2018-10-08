@@ -31,8 +31,9 @@ public class DriverController {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST, value = "/drivers")
-	public void addDriver(@RequestBody Driver driver) {
+	public String addDriver(@RequestBody Driver driver) {
 		driverService.addDriver(driver);
+		return "YOU ADDED A DRIVER TO THE DATABASE";
 	}
 	
 	@RequestMapping(method=RequestMethod.PUT, value = "/drivers/{username}")
@@ -51,4 +52,10 @@ public class DriverController {
 		}
 		return "YOU DELETED A DRIVER";
 	}
+	
+	// active drivers
+	// PROBABLY DID IT INSIDE SYSTEM ADMIN CLASS
+//	@RequestMapping("/drivers/active") {
+//		
+//	}
 }

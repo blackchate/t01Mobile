@@ -1,5 +1,6 @@
 package ca.mcgill.ecse321.rideshare.adminOperationsController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,13 +9,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import ca.mcgill.ecse321.rideshare.driverController.DriverService;
+import ca.mcgill.ecse321.rideshare.model.Driver;
+import ca.mcgill.ecse321.rideshare.model.Passenger;
 import ca.mcgill.ecse321.rideshare.model.Trip;
+import ca.mcgill.ecse321.rideshare.passengerController.PassengerService;
 
 @RestController
 
 public class AdminOperationsController {
 	@Autowired
 	private AdminOperationsService adminOpService;
+	
+	@Autowired
+	private DriverService driverService;
+	
+	@Autowired
+	private PassengerService passengerService;
 	
 	// @RequestMapping("/admin/operations")
 	// return list of active trips, users and passengers
@@ -34,16 +45,27 @@ public class AdminOperationsController {
 		return "YOU POSTED A NEW TRIP";
 	}
 	
-<<<<<<< HEAD
 	@RequestMapping("/admin/operations/trips/active")
 	public List<Trip> getActiveTrips() {
 		return adminOpService.getAllActiveTrips();
 	}
-=======
+	
 //	@RequestMapping("/admin/operations/trips/active")
 	
 //	public List<Trip> getActiveTrips() {
 //		return adminOpService.getAllActiveTrips();
 //	}
->>>>>>> ec20bd7ef17f69a309626083827da72970a23050
+	
+	
+	// active drivers and passengers endpoints
+	@RequestMapping("/drivers/active")
+	public List<Driver> getActiveDrivers() {
+		return driverService.getActiveDrivers();
+	}
+	
+	@RequestMapping("/passengers/active")
+	public List<Passenger> getActivePassengers() {
+		return passengerService.getActivePassengers();
+	}
+	
 }

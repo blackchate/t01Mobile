@@ -57,4 +57,15 @@ public class DriverService {
 		drivers.removeIf(u -> u.getUserName().equals(username));
 		return driverToDelete;
 	}
+	
+	// active drivers
+	public List<Driver> getActiveDrivers() {
+		List<Driver> activeDrivers = new ArrayList<>();
+		for(int i = 0; i < drivers.size(); i++) {
+			if(drivers.get(i).isActive()) {
+				activeDrivers.add(drivers.get(i));
+			}
+		}
+		return activeDrivers;
+	}
 }

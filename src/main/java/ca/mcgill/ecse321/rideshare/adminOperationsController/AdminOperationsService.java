@@ -38,7 +38,7 @@ public class AdminOperationsService {
 	public List<User> getAllActiveUsers() {
 		List<User> activeUsers = null;
 		for (int i = 0; i < allUsers.size(); i++) {
-			if (allUsers.get(i).isActice()) {
+			if (allUsers.get(i).isActive()) {
 				activeUsers.add(allUsers.get(i));
 			}
 		}

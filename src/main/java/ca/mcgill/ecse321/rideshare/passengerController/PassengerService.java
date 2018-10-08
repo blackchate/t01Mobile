@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import ca.mcgill.ecse321.rideshare.model.Car;
+import ca.mcgill.ecse321.rideshare.model.Driver;
 import ca.mcgill.ecse321.rideshare.model.Passenger;
 import ca.mcgill.ecse321.rideshare.model.User;
 
@@ -15,9 +16,9 @@ public class PassengerService {
 	Car car1 = new Car();
 	private List<Passenger> passengers = new ArrayList<>(Arrays.asList(
 			new Passenger("Passenger1", "ddsdsds", 2, "donat@test.com", "01233445", "Alien",
-					"Mars", "myUsername", true, "55555555555"),
+					"Mars", "myUsername", false, "55555555555"),
 			new Passenger("Passenger2", "Lassdfadtname2", 55, "test@test.com", "555555", "Earthling",
-					"Earth", "another username", true, "7777777777777"),
+					"Earth", "another username", false, "7777777777777"),
 			new Passenger("Passenger3", "ssssssss", 901, "earth@test.com", "01233445", "Earthling",
 					"Pacific Ocean", "sdfd", true, "8888888888888")
 			));
@@ -55,5 +56,16 @@ public class PassengerService {
 		}
 		passengers.removeIf(u -> u.getUserName().equals(username));
 		return passengerToRemove;
+	}
+	
+	// active passengers
+	public List<Passenger> getActivePassengers() {
+		List<Passenger> activePassengers = new ArrayList<>();
+		for(int i = 0; i < passengers.size(); i++) {
+			if(passengers.get(i).isActive()) {
+				activePassengers.add(passengers.get(i));
+			}
+		}
+		return activePassengers;
 	}
 }
