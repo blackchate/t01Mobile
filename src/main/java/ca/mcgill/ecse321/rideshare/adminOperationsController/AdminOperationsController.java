@@ -26,15 +26,15 @@ public class AdminOperationsController {
 	
 	// TODO: getTrip(int id)
 	
-	@RequestMapping(method=RequestMethod.POST, value = "/admin/operations/trips") // why doesn't it work when this address is the same as GET
+	@RequestMapping(method=RequestMethod.POST, value = "/admin/operations/trips")
 	// handle uniqueness of id in front end?
 	public String addTrip(@RequestBody Trip trip) {
 		adminOpService.addNewtrip(trip); // TODO: take care of ID here
 		return "YOU POSTED A NEW TRIP";
 	}
 	
-//	@RequestMapping("/admin/operations/trips/active")
-//	public List<Trip> getActiveTrips() {
-//		return adminOpService.getAllActiveTrips();
-//	}
+	@RequestMapping("/admin/operations/trips/active")
+	public List<Trip> getActiveTrips() {
+		return adminOpService.getAllActiveTrips();
+	}
 }
