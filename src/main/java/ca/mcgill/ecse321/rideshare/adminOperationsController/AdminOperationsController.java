@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import ca.mcgill.ecse321.rideshare.model.Trip;
 
 @RestController
+
 public class AdminOperationsController {
 	@Autowired
 	private AdminOperationsService adminOpService;
@@ -33,8 +34,16 @@ public class AdminOperationsController {
 		return "YOU POSTED A NEW TRIP";
 	}
 	
+<<<<<<< HEAD
 	@RequestMapping("/admin/operations/trips/active")
 	public List<Trip> getActiveTrips() {
 		return adminOpService.getAllActiveTrips();
 	}
+=======
+//	@RequestMapping("/admin/operations/trips/active")
+	
+//	public List<Trip> getActiveTrips() {
+//		return adminOpService.getAllActiveTrips();
+//	}
+>>>>>>> ec20bd7ef17f69a309626083827da72970a23050
 }
