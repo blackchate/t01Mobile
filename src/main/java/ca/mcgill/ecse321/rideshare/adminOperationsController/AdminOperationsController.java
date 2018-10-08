@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -51,12 +52,21 @@ public class AdminOperationsController {
 		return adminOpService.getAllActiveTrips();
 	}
 	
-//	@RequestMapping("/admin/operations/trips/active")
+	@RequestMapping(method=RequestMethod.PUT, value = "/admin/operations/trips/{identifier}")
+	public String updateTrip(@RequestBody Trip trip, @PathVariable long identifier) {
+		if(adminOpService.updateTrip(identifier, trip) == null) {
+			return "TRIP COULDN'T BE UPDATED AND HENCE DOESN'T EXISTS";
+		}
+		else {
+			adminOpService.updateTrip(identifier, trip);
+			return "YOU UPDATED A TRIP";
+		}
+	}
 	
-//	public List<Trip> getActiveTrips() {
-//		return adminOpService.getAllActiveTrips();
-//	}
-	
+	@RequestMapping(method=RequestMethod.DELETE, value = "/admin/operations/trips/{identifier}")
+	public Trip deleteTrip(@PathVariable long identifier) {
+		return adminOpService.deleteTrip(identifier);
+	}
 	
 	
 	// USERS END POINTS

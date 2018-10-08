@@ -29,6 +29,7 @@ public Trip(String date, String pickUpLocation, String destination, //SpecificRa
 		this.distance = distance;
 		this.passenger = passenger;
 		this.driver = driver;
+		this.identifier = (long)(Math.random() * 9000000000000000000L) + 1; // generate a random number between 1 and 1,000,000,000,000,000,000 as ID. chances of class are very small 
 		
 		this.id++; // Increment Id everytime a new trip instance is created
 		// TODO: Make sure when I do list.add, this still works
@@ -36,6 +37,17 @@ public Trip(String date, String pickUpLocation, String destination, //SpecificRa
 
 // association class with Rating
 SpecificRating specificRating;
+
+// When you create a new trip, this is null
+private long identifier;
+
+public void setIdentifier(long value) {
+	this.identifier = value;
+}
+
+public long getIdentifier() {
+	return this.identifier;
+}
 
 private String date;
 

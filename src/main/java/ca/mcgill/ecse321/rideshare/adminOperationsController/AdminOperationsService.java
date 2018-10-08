@@ -27,7 +27,11 @@ public class AdminOperationsService {
 	private PassengerService passengerService;
 	
 	
+	
+	// TEST DATA
+	
 	Car car1 = new Car();
+	
 	Driver driver1 = new Driver("Driver1", "Lassdfadtname2", 55, "test@test.com", "555555", "Earthling", "Earth",
 			"another username", false, 66, car1);
 	Set<Passenger> passengerSet = new HashSet<Passenger>();
@@ -69,7 +73,11 @@ public class AdminOperationsService {
 			"sdfd", false, "creditCardInfo")));
 	
 	
-	// METHODS
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	
+	// ENDPOINTS
 	
 	
 	// USERS
@@ -101,52 +109,48 @@ public class AdminOperationsService {
 		}
 		return activeUsers;
 	}
-	
-//	public List<User> getAllUsers() {
-//		List<User> allUsers = new ArrayList<>();
-//		for(int i = 0; i < users.size(); i++) {
-//			allUsers.add(users.get(i));
-//		}
-//		for(int i = 0; i < drivers.size(); i++) {
-//			allUsers.add(drivers.get(i));
-//		}
-//		for(int i = 0; i < passengers.size(); i++) {
-//			allUsers.add(passengers.get(i));
-//		}
-//		return allUsers;
-//	}
-
-//	public List<User> getAllActiveUsers() {
-//		List<User> activeUsers = null;
-//		for (int i = 0; i < users.size(); i++) {
-//			if (users.get(i).isActive()) {
-//				activeUsers.add(users.get(i));
-//			}
-//		}
-//		return activeUsers;
-//	}
-
-	// post active user maybe?
 
 	
 	// TRIPS
 	
-	
-	// post active trip
 	public List<Trip> getAllTrips() {
 		return allTrips;
 	}
 
 	public String addNewtrip(Trip trip) {
+		// generate a random identifier String
+		// if it clashes with the identifier of another trip in the list, generate another one
+		
+		long identifier = (long)(Math.random() * 9000000000000000000L) + 1; // very big number so clashes will be small. No time to 100% prevent clashes
+		trip.setIdentifier(identifier);
 		allTrips.add(trip);
 		return "YOU ADDED A NEW TRIP TO DATABASE";
 	}
 
-	// TODO: Put/Updat trip
-	// TODO: Delete trip
-
-	// public String deleteTrip() { // what do we pass in? Trip ID?
-	// }
+	public Trip updateTrip(long identifier, Trip trip) {
+		Trip tripToUpdate = null;
+		for(int i = 0; i < allTrips.size(); i++) {
+			if(allTrips.get(i).getIdentifier() == identifier) {
+				tripToUpdate = allTrips.get(i);
+				allTrips.set(i, trip);
+				return tripToUpdate;
+			}
+		}
+		return tripToUpdate;
+	}
+	
+	// returns the trip we removed
+	public Trip deleteTrip(long identifier) {
+		Trip tripToRemove = null;
+		for(int i = 0; i < allTrips.size(); i++) {
+			if(allTrips.get(i).getIdentifier() == identifier) {
+				tripToRemove = allTrips.get(i);
+				break;
+			}
+		}
+		allTrips.removeIf(t -> t.getIdentifier() == identifier);
+		return tripToRemove;
+	}
 
 	public List<Trip> getAllActiveTrips() {
 		List<Trip> activeTrips = null;
@@ -157,12 +161,5 @@ public class AdminOperationsService {
 		}
 		return activeTrips;
 	}
-	
-	// TODO: set a trip to isComplete == true? DO we do this here on just use method?
-	public String setTripToCompleted(Trip trip) {
-		trip.setIsComplete(true);
-		return "YOU SET A TRIP TO COMPLETED";
-	}
 }
 
-// DON'T KNOW HOW

@@ -27,7 +27,7 @@ public class PassengerService {
 		return passengers;
 	}
 	
-	public Passenger getPassenger(String username) { // 
+	public Passenger getPassenger(String username) {
 		return passengers.stream().filter(u -> u.getUserName().equals(username)).findFirst().get();
 	}
 	
@@ -35,14 +35,15 @@ public class PassengerService {
 		passengers.add(passenger);
 	}
 	
-	public void updatePassenger(String username, Passenger passenger) {
+	public String updatePassenger(String username, Passenger passenger) {
 		for(int i = 0; i < passengers.size(); i++) {
 			Passenger p = passengers.get(i);
 			if(p.getUserName().equals(username)) {
 				passengers.set(i, passenger);
-				return;
+				return "YOU UPDATED A PASSENGER";
 			} // TODO: else create new user with that username 
 		}
+		return "PASSENGER DOESN'T EXIST AND THEREFORE COULDN'T BE UPDATED";
 	}
 	
 	public Passenger deletePassenger(String username) {
