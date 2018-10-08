@@ -30,8 +30,9 @@ public class PassengerController {
 	}
 
 	@RequestMapping(method=RequestMethod.POST, value = "/passengers")
-	public void addPassenger(@RequestBody Passenger passenger) {
+	public String addPassenger(@RequestBody Passenger passenger) {
 		passengerService.addPassenger(passenger);
+		return "YOU ADDED A NEW PASSENGER";
 	}
 	
 	@RequestMapping(method=RequestMethod.PUT, value = "/passengers/{username}")

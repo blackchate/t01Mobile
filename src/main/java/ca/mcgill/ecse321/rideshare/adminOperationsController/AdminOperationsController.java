@@ -13,6 +13,7 @@ import ca.mcgill.ecse321.rideshare.driverController.DriverService;
 import ca.mcgill.ecse321.rideshare.model.Driver;
 import ca.mcgill.ecse321.rideshare.model.Passenger;
 import ca.mcgill.ecse321.rideshare.model.Trip;
+import ca.mcgill.ecse321.rideshare.model.User;
 import ca.mcgill.ecse321.rideshare.passengerController.PassengerService;
 
 @RestController
@@ -56,6 +57,20 @@ public class AdminOperationsController {
 //		return adminOpService.getAllActiveTrips();
 //	}
 	
+	
+	
+	// USERS END POINTS
+	
+	
+	@RequestMapping("/users")
+	public List<User> getAllUsers() {
+		return adminOpService.getAllUsers();
+	}
+	
+	@RequestMapping("/users/active")
+	public List<User> getAllActiveUsers() {
+		return adminOpService.getAllActiveUsers();
+	}
 	
 	// active drivers and passengers endpoints
 	@RequestMapping("/drivers/active")

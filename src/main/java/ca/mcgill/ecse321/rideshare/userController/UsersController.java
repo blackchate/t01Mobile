@@ -23,19 +23,19 @@ public class UsersController {
 		return "This is Donat's REST API. Browse safe"; 
 	}
 	
-	@RequestMapping("/users")
-	public List<User> getAllUsers() {
-		return usersService.getAllUsers();
-	}
-
-	
-	@RequestMapping("/users/{username}")
-	public User getUser(@PathVariable String username){
-		return usersService.getUser(username);
-	}
-	
-	@RequestMapping(method=RequestMethod.POST, value="/users")
-	public void addUser(@RequestBody User user) {
-		usersService.addUser(user);
-	}
+//	@RequestMapping("/users")
+//	public List<User> getAllUsers() {
+//		return usersService.getAllUsers();
+//	}
+//
+//	
+//	@RequestMapping("/users/{username}")
+//	public User getUser(@PathVariable String username){
+//		return usersService.getUser(username);
+//	}
+//	
+//	@RequestMapping(method=RequestMethod.POST, value="/users")
+//	public void addUser(@RequestBody User user) {
+//		usersService.addUser(user);
+//	}
 }
