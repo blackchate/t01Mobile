@@ -3,70 +3,49 @@ package ca.mcgill.ecse321.rideshare.passengerController;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ca.mcgill.ecse321.rideshare.model.Car;
-import ca.mcgill.ecse321.rideshare.model.Driver;
 import ca.mcgill.ecse321.rideshare.model.Passenger;
 import ca.mcgill.ecse321.rideshare.model.User;
+import ca.mcgill.ecse321.rideshare.repo.PassengerRepository;
 
 @Service
 public class PassengerService {
-	Car car1 = new Car();
-	private List<Passenger> passengers = new ArrayList<>(Arrays.asList(
-			new Passenger("Passenger1", "ddsdsds", 2, "donat@test.com", "01233445", "Alien",
-					"Mars", "myUsername", false, "55555555555"),
-			new Passenger("Passenger2", "Lassdfadtname2", 55, "test@test.com", "555555", "Earthling",
-					"Earth", "another username", false, "7777777777777"),
-			new Passenger("Passenger3", "ssssssss", 901, "earth@test.com", "01233445", "Earthling",
-					"Pacific Ocean", "sdfd", true, "8888888888888")
-			));
 	
+	@Autowired
+	private PassengerRepository passengerRepo;
+
 	public List<Passenger> getAllPassengers() {
+		List<Passenger> passengers = new ArrayList<>();
+		passengerRepo.findAll().forEach(passengers::add);
 		return passengers;
 	}
 	
 	public Passenger getPassenger(String username) {
-		return passengers.stream().filter(u -> u.getUserName().equals(username)).findFirst().get();
-	}
+		return passengerRepo.findByUserName(username);
+		}
 	
 	public void addPassenger(Passenger passenger) {
-		passengers.add(passenger);
+		passengerRepo.save(passenger);
 	}
 	
-	public String updatePassenger(String username, Passenger passenger) {
-		for(int i = 0; i < passengers.size(); i++) {
-			Passenger p = passengers.get(i);
-			if(p.getUserName().equals(username)) {
-				passengers.set(i, passenger);
-				return "YOU UPDATED A PASSENGER";
-			} // TODO: else create new user with that username 
-		}
-		return "PASSENGER DOESN'T EXIST AND THEREFORE COULDN'T BE UPDATED";
+	public void updatePassenger(String username, Passenger passenger) {
+		passengerRepo.save(passenger);
 	}
 	
-	public Passenger deletePassenger(String username) {
-		Passenger passengerToRemove = null;
-		for(int i = 0; i < passengers.size(); i++) {
-			Passenger d = passengers.get(i);
-			if(d.getUserName().equals(username)) {
-				passengerToRemove = passengers.get(i);
-				break;
-			}
-		}
-		passengers.removeIf(u -> u.getUserName().equals(username));
-		return passengerToRemove;
+	public Optional<Passenger> deletePassenger(String username) {
+		Optional<Passenger> passengerToDelete = passengerRepo.findById(username);
+		passengerRepo.deleteById(username);
+		return passengerToDelete;
 	}
 	
 	// active passengers
 	public List<Passenger> getActivePassengers() {
 		List<Passenger> activePassengers = new ArrayList<>();
-		for(int i = 0; i < passengers.size(); i++) {
-			if(passengers.get(i).isActive()) {
-				activePassengers.add(passengers.get(i));
-			}
-		}
+		passengerRepo.findByIsActive(true).forEach(activePassengers::add);
 		return activePassengers;
 	}
 }

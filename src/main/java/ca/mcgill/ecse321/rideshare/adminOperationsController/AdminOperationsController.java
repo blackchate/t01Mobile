@@ -33,7 +33,7 @@ public class AdminOperationsController {
 	// return list of active trips, users and passengers
 	// reutrn top drivers and passengers
 	
-	@RequestMapping("/admin/operations/trips")
+	/*@RequestMapping("/admin/operations/trips")
 	public List<Trip> getAllTrips() {
 		return adminOpService.getAllTrips();
 	}
@@ -72,25 +72,25 @@ public class AdminOperationsController {
 	// USERS END POINTS
 	
 	
-	@RequestMapping("/users")
-	public List<User> getAllUsers() {
-		return adminOpService.getAllUsers();
-	}
+	//@RequestMapping("/users")
+	//public List<User> getAllUsers() {
+	//	return adminOpService.getAllUsers();
+	//}
 	
-	@RequestMapping("/users/active")
-	public List<User> getAllActiveUsers() {
-		return adminOpService.getAllActiveUsers();
-	}
+	//@RequestMapping("/users/active")
+	//public List<User> getAllActiveUsers() {
+	//	return adminOpService.getAllActiveUsers();
+	//}
 	
 	// active drivers and passengers endpoints
-	@RequestMapping("/drivers/active")
-	public List<Driver> getActiveDrivers() {
-		return driverService.getActiveDrivers();
-	}
+	//@RequestMapping("/drivers/active")
+	//public List<Driver> getActiveDrivers() {
+//		return driverService.getActiveDrivers();
+	//}
 	
 	@RequestMapping("/passengers/active")
 	public List<Passenger> getActivePassengers() {
 		return passengerService.getActivePassengers();
-	}
+	}*/
 	
 }

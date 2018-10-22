@@ -32,19 +32,19 @@ public class AdminOperationsService {
 	
 	Car car1 = new Car();
 	
-	Driver driver1 = new Driver("Driver1", "Lassdfadtname2", 55, "test@test.com", "555555", "Earthling", "Earth",
-			"another username", false, 66, car1);
+	//Driver driver1 = new Driver("Driver1", "Lassdfadtname2", 55, "test@test.com", "555555", "Earthling", "Earth",
+		//	"another username", false, 66, car1);
 	Set<Passenger> passengerSet = new HashSet<Passenger>();
 
 	// only first driver is active
 
-	private List<Trip> allTrips = new ArrayList<>(Arrays.asList(
-			new Trip("TEST", "PickupLocation", "Destination", "pickUpTime", "arrival Time", 5, true, 55.5, (Integer)5, 3, 555, 10,
-			passengerSet, driver1)
-			));
+	//private List<Trip> allTrips = new ArrayList<>(Arrays.asList(
+	//		new Trip("TEST", "PickupLocation", "Destination", "pickUpTime", "arrival Time", 5, true, 55.5, (Integer)5, 3, 555, 10,
+	//		passengerSet, driver1)
+	//		));
 	
 	// List of Drivers
-	private List<Driver> drivers = new ArrayList<>(Arrays.asList( // new ArrayList so that drivers list is mutable
+	/*private List<Driver> drivers = new ArrayList<>(Arrays.asList( // new ArrayList so that drivers list is mutable
 			new Driver("Driver1", "ddsdsds", 2, "donat@test.com", "01233445", "Alien",
 					"Mars", "myUsername", true, 55, car1),
 			new Driver("Driver2", "Lassdfadtname2", 55, "test@test.com", "555555", "Earthling",
@@ -52,7 +52,7 @@ public class AdminOperationsService {
 			new Driver("Driver3", "ssssssss", 901, "earth@test.com", "01233445", "Earthling",
 					"Pacific Ocean", "sdfd", false, 77, car1)
 			));
-	
+	*/
 	// List of Passengers
 	private List<Passenger> passengers = new ArrayList<>(Arrays.asList(
 			new Passenger("Passenger1", "ddsdsds", 2, "donat@test.com", "01233445", "Alien",
@@ -64,7 +64,7 @@ public class AdminOperationsService {
 			));
 	
 	// List of Users
-	private List<User> users = new ArrayList<>(Arrays.asList( // new ArrayList so that drivers list is mutable
+	/*private List<User> users = new ArrayList<>(Arrays.asList( // new ArrayList so that drivers list is mutable
 	new Driver("User Driver 1", "ddsdsds", 2, "donat@test.com", "01233445", "Alien", "Mars", "myUsername", true, 66,
 			car1),
 	new Driver("User Driver 2", "Lassdfadtname2", 55, "test@test.com", "555555", "Earthling", "Earth",
@@ -109,11 +109,11 @@ public class AdminOperationsService {
 		}
 		return activeUsers;
 	}
-
+*/
 	
 	// TRIPS
 	
-	public List<Trip> getAllTrips() {
+/*	public List<Trip> getAllTrips() {
 		return allTrips;
 	}
 
@@ -160,6 +160,6 @@ public class AdminOperationsService {
 			}
 		}
 		return activeTrips;
-	}
+	}*/
 }
 
