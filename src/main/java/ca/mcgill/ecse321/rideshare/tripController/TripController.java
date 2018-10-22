@@ -77,15 +77,6 @@ public class TripController {
 			add(trip);
 			}}));
 		}});*/
-		 /*publisherRepository.save(new HashSet<Publisher>() {{
-	            add(new Publisher("Publisher A", new HashSet<Book>() {{
-	                add(bookA);
-	                add(bookB);
-	            }}));
-
-	            String firstName, String lastName, int age, String email, String phoneNumber, String gender,
-				String address, String userName, boolean isActive, String creditCardNumber, Set<Trip> trips*/
-		//int age = 0;
 		
 		tripService.addTrip(trip);
 	}
@@ -95,9 +86,8 @@ public class TripController {
 		Driver driver = driverService.getDriver(driverId);
 		int age = driver.getAge();
 		int accountNumber = driver.getAccountNumber();
-		Car car =  driver.getCar();
 		trip.setDriver(new Driver("", "", age, "", "", "",
-			"", driverId, true, accountNumber, car));
+			"", driverId, true, accountNumber));
 		tripService.addTrip(trip);
 	}
 	

@@ -9,14 +9,9 @@ import java.util.HashSet;
 
 @Entity
 @Table(name = "driver")
-public class Driver implements Serializable/*extends User*/ {
-	/*public Driver() {
-		super();
-		// TODO Auto-generated constructor stub
-	}*/
+public class Driver implements Serializable {
 	
 	@Id
-	//@GeneratedValue(strategy = GenerationType.AUTO)
 	private String userName;
 	
 	@Column(name= "status")
@@ -46,9 +41,9 @@ public class Driver implements Serializable/*extends User*/ {
 	@Column(name = "accountNumber")
 	private int accountNumber;
 	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "car_id")
-	private Car car;
+	//@OneToOne(cascade = CascadeType.ALL)
+	//@JoinColumn(name = "car_id")
+	//private Car car;
 	
 	//@Column(name = "trip")
 	//private Set<Trip> trip;
@@ -57,8 +52,7 @@ public class Driver implements Serializable/*extends User*/ {
 	}
 	
 	public Driver(String firstName, String lastName, int age, String email, String phoneNumber, String gender,
-			String address, String userName, boolean isActive, int accountNumber , Car car) {
-		//super(firstName, lastName, age, email, phoneNumber, gender, address, userName, isActive);
+			String address, String userName, boolean isActive, int accountNumber) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
@@ -69,7 +63,6 @@ public class Driver implements Serializable/*extends User*/ {
 		this.userName = userName;
 		this.isActive = isActive;
 		this.accountNumber = accountNumber;
-		this.car = car;
 	}
 
 	public void setFirstName(String value) {
@@ -175,13 +168,13 @@ public class Driver implements Serializable/*extends User*/ {
 	 */
 	
 
-	public void setCar(Car value) {
+	/*public void setCar(Car value) {
 		this.car = value;
 	}
 
 	public Car getCar() {
 		return this.car;
-	}
+	}*/
 
 	/**
 	 * <pre>

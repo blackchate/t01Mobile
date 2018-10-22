@@ -12,8 +12,7 @@ import java.util.HashSet;
 public class Passenger implements Serializable {
 	
 	@Id
-	//@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "passenger_id")
+	//@Column(name = "passenger_id")
 	private String userName;
 	
 	@Column(name= "status")
@@ -57,13 +56,11 @@ public class Passenger implements Serializable {
 	private Set<Trip> trips;
 	
 	protected Passenger() {
-		//super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public Passenger(String firstName, String lastName, int age, String email, String phoneNumber, String gender,
 			String address, String userName, boolean isActive, String creditCardNumber) {
-		//super(firstName, lastName, age, email, phoneNumber, gender, address, userName, isActive);
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
@@ -74,13 +71,10 @@ public class Passenger implements Serializable {
 		this.userName = userName;
 		this.isActive = isActive;
 		this.creditCardNumber = creditCardNumber;
-		// TODO Auto-generated constructor stub
-		// TODO: ADD PASSENGER RATING FOR SPECIFIC TRIP IN CONSTRUCTOR
 	}
 	
 	public Passenger(String firstName, String lastName, int age, String email, String phoneNumber, String gender,
 			String address, String userName, boolean isActive, String creditCardNumber, Set<Trip> trips) {
-		//super(firstName, lastName, age, email, phoneNumber, gender, address, userName, isActive);
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
@@ -92,8 +86,6 @@ public class Passenger implements Serializable {
 		this.isActive = isActive;
 		this.creditCardNumber = creditCardNumber;
 		this.trips = trips;
-		// TODO Auto-generated constructor stub
-		// TODO: ADD PASSENGER RATING FOR SPECIFIC TRIP IN CONSTRUCTOR
 	}
 	
 	public void setFirstName(String value) {

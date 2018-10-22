@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import ca.mcgill.ecse321.rideshare.model.Car;
 import ca.mcgill.ecse321.rideshare.model.Driver;
-import ca.mcgill.ecse321.rideshare.model.User;
 import ca.mcgill.ecse321.rideshare.repo.DriverRepository;
 
 @Service
@@ -19,7 +18,7 @@ public class DriverService {
 	@Autowired
 	private DriverRepository driverRepo;
 	
-	Car car1 = new Car();
+	//Car car1 = new Car();
 	
 	public List<Driver> getAllDrivers() {
 		List<Driver> drivers = new ArrayList<>();

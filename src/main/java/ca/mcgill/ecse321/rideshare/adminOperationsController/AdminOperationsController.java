@@ -14,7 +14,6 @@ import ca.mcgill.ecse321.rideshare.driverController.DriverService;
 import ca.mcgill.ecse321.rideshare.model.Driver;
 import ca.mcgill.ecse321.rideshare.model.Passenger;
 import ca.mcgill.ecse321.rideshare.model.Trip;
-import ca.mcgill.ecse321.rideshare.model.User;
 import ca.mcgill.ecse321.rideshare.passengerController.PassengerService;
 
 @RestController

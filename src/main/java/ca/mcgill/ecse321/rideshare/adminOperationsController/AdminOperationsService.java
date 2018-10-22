@@ -14,7 +14,6 @@ import ca.mcgill.ecse321.rideshare.model.Car;
 import ca.mcgill.ecse321.rideshare.model.Driver;
 import ca.mcgill.ecse321.rideshare.model.Passenger;
 import ca.mcgill.ecse321.rideshare.model.Trip;
-import ca.mcgill.ecse321.rideshare.model.User;
 import ca.mcgill.ecse321.rideshare.passengerController.PassengerService;
 
 @Service
@@ -30,7 +29,7 @@ public class AdminOperationsService {
 	
 	// TEST DATA
 	
-	Car car1 = new Car();
+	//Car car1 = new Car();
 	
 	//Driver driver1 = new Driver("Driver1", "Lassdfadtname2", 55, "test@test.com", "555555", "Earthling", "Earth",
 		//	"another username", false, 66, car1);

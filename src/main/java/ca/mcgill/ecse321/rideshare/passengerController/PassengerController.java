@@ -42,7 +42,7 @@ public class PassengerController {
 	}
 
 	@RequestMapping(method=RequestMethod.DELETE, value = "/passengers/{username}")
-	public void deletePassenger(@PathVariable String username) { // TODO: if There's no passenger to remove, return custom message
+	public void deletePassenger(@PathVariable String username) { 
 		passengerService.deletePassenger(username);
 	}
 	
