@@ -43,7 +43,8 @@ import ca.mcgill.ecse321.rideshare.model.User;
 import ca.mcgill.ecse321.rideshare.repo.Repository; //Repository.java
 
 //static imports for methods
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
+
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
@@ -77,7 +78,20 @@ public class RideshareV1ApplicationTests {
 	//ADMIN getAllTrips, getAllActiveUsers, getAllActiveTrips============================================================//
 	private static final String ADMIN_KEY = "TestAdmin";
 	private static final String NONEXISTING_ADMINKEY = "NotAnAdmin";
-	//admin model required*
+
+	@BeforeEach
+	void setMockOutput() {
+  		when(TripDao.getAllTrips(anyString())).thenAnswer( (InvocationOnMock invocation) -> {
+    		if(invocation.getArgument(0).equals(DRIVER_KEY)) {
+      			Driver driver = new Driver();
+      			driver.setName(DRIVER_KEY);
+      			return driver;
+    			} 
+    		else {
+      			return null;
+    			}
+  			});
+		}
 
 
 	//DRIVER *getAllDrivers, getDriver===================================================================================//
@@ -100,7 +114,8 @@ public class RideshareV1ApplicationTests {
 
 	@Test
 	public void testDriverQueryFound() {
-  		assertEquals(dcontrol.getUser(DRIVER_KEY), DRIVER_KEY);
+  		assertEquals(dcontrol.getDriver(DRIVER_KEY), DRIVER_KEY);
+
 	}
 
 	@Test
@@ -128,12 +143,14 @@ public class RideshareV1ApplicationTests {
 
 	@Test
 	public void testPassengerQueryFound() {
-  		assertEquals(pcontrol.getUser(PASSENGER_KEY), PASSENGER_KEY);
+  		assertEquals(pcontrol.getPassenger(PASSENGER_KEY), PASSENGER_KEY);
+  		assertArrayEquals();
+  		
 	}
 
 	@Test
 	public void testPassengerQueryNotFound() {
-  		assertEquals(pcontrol.getUser(NONEXISTING_PASSENGERKEY), PassengerController.ERROR_NOT_FOUND_MESSAGE);
+  		assertEquals(pcontrol.getPassenger(NONEXISTING_PASSENGERKEY), PassengerController.ERROR_NOT_FOUND_MESSAGE);
 	}
 
 	//USER *getAllUsers, getUser=======================================================================================//
