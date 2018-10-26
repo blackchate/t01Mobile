@@ -1,19 +1,130 @@
 package ca.mcgill.ecse321.rideshare.model;
 
 import java.util.Set;
+
+import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import java.io.Serializable;
 import java.util.HashSet;
 
-public class Trip {
+@Entity
+@Table(name = "trip")
+public class Trip implements Serializable {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	//@Column(name = "trip_id")
+	private long identifier;
+	//When you create a new trip, this is null
+	
+	@Column(name = "date")
+	private String date;
+	
 
-public Trip() {
+	@Column(name = "pickUpLocation")
+	private String pickUpLocation;
+	
+	@Column(name = "destination")
+	private String destination;
+	
+	@Column(name = "pickUpTime")
+	private String pickUpTime;
+	
+	@Column(name = "arrivalTime")
+	private String arrivalTime;
+	
+	@Column(name = "availableSeats")
+	private int availableSeats;
+	
+	@Column(name = "status")
+	private boolean isComplete;
+	
+	@Column(name = "fare")
+	private double fare;
+
+	@Column(name = "estimatedTripDuration")
+	private Integer estimatedTripDuration;
+	
+	@Column(name = "driverRating")
+	private int driverRating;
+	
+	@Column(name = "passengerRating")
+	private int passengerRating;
+	
+	@Column(name = "distance")
+	private int distance;
+	
+	/*@ManyToMany(fetch = FetchType.LAZY,
+			cascade = {CascadeType.PERSIST,
+					CascadeType.MERGE
+			},
+			mappedBy = "trips")*/
+	@ManyToMany(fetch = FetchType.LAZY,
+			cascade = {CascadeType.REMOVE},
+			mappedBy = "trips")
+	
+	private Set<Passenger> passengers;
+	
+	/* @ManyToOne(fetch = FetchType.LAZY)
+	 private Set<Passenger> passengers;*/
+	
+	@ManyToOne(cascade = CascadeType.REMOVE)
+	private Driver driver;
+
+
+protected Trip() {
 	
 }
 	
+/*public Trip(String date, String pickUpLocation, String destination, //SpecificRating specificRating, 
+		String pickUpTime, String arrivalTime, int availableSeats, boolean isComplete, double fare,
+		Integer estimatedTripDuration, int driverRating, int passengerRating, int distance, Driver driver) {
+	super();
+//	this.specificRating = specificRating;
+	this.date = date;
+	this.pickUpLocation = pickUpLocation;
+	this.destination = destination;
+	this.pickUpTime = pickUpTime;
+	this.arrivalTime = arrivalTime;
+	this.availableSeats = availableSeats;
+	this.isComplete = isComplete;
+	this.fare = fare;
+	this.estimatedTripDuration = estimatedTripDuration;
+	this.driverRating = driverRating;
+	this.passengerRating = passengerRating;
+	this.distance = distance;
+	this.driver = driver;
+	//this.identifier = identifier;
+}*/
+
 public Trip(String date, String pickUpLocation, String destination, //SpecificRating specificRating, 
+		String pickUpTime, String arrivalTime, int availableSeats, boolean isComplete, double fare,
+		Integer estimatedTripDuration, int driverRating, int passengerRating, int distance, Driver driver,long identifier, Set<Passenger> passengers) {
+	super();
+//	this.specificRating = specificRating;
+	this.date = date;
+	this.pickUpLocation = pickUpLocation;
+	this.destination = destination;
+	this.pickUpTime = pickUpTime;
+	this.arrivalTime = arrivalTime;
+	this.availableSeats = availableSeats;
+	this.isComplete = isComplete;
+	this.fare = fare;
+	this.estimatedTripDuration = estimatedTripDuration;
+	this.driverRating = driverRating;
+	this.passengerRating = passengerRating;
+	this.distance = distance;
+	this.driver = driver;
+	this.identifier = identifier;
+	this.passengers = passengers;
+}
+
+/*public Trip(String date, String pickUpLocation, String destination, //SpecificRating specificRating, 
 			String pickUpTime, String arrivalTime, int availableSeats, boolean isComplete, double fare,
 			Integer estimatedTripDuration, int driverRating, int passengerRating, int distance,
-			Set<Passenger> passenger, Driver driver) {
-		super();
+			Set<Passenger> passengers, Driver driver) {
+		//super();
 //		this.specificRating = specificRating;
 		this.date = date;
 		this.pickUpLocation = pickUpLocation;
@@ -27,19 +138,21 @@ public Trip(String date, String pickUpLocation, String destination, //SpecificRa
 		this.driverRating = driverRating;
 		this.passengerRating = passengerRating;
 		this.distance = distance;
-		this.passenger = passenger;
+		this.passengers = passengers;
 		this.driver = driver;
-		
-		this.id++; // Increment Id everytime a new trip instance is created
-		// TODO: Make sure when I do list.add, this still works
-	}
+		this.identifier = identifier;
+	}*/
 
 // association class with Rating
-SpecificRating specificRating;
+//SpecificRating specificRating;
 
-private String date;
+public void setIdentifier(long value) {
+	this.identifier = value;
+}
 
-private static int id; // will be unique for each Trip
+public long getIdentifier() {
+	return this.identifier;
+}
 
 public void setDate(String value) {
    this.date = value;
@@ -49,8 +162,6 @@ public String getDate() {
    return this.date;
 }
 
-private String pickUpLocation;
-
 public void setPickUpLocation(String value) {
    this.pickUpLocation = value;
 }
@@ -58,8 +169,6 @@ public void setPickUpLocation(String value) {
 public String getPickUpLocation() {
    return this.pickUpLocation;
 }
-
-private String destination;
 
 public void setDestination(String value) {
    this.destination = value;
@@ -69,8 +178,6 @@ public String getDestination() {
    return this.destination;
 }
 
-private String pickUpTime;
-
 public void setPickUpTime(String value) {
    this.pickUpTime = value;
 }
@@ -78,8 +185,6 @@ public void setPickUpTime(String value) {
 public String getPickUpTime() {
    return this.pickUpTime;
 }
-
-private String arrivalTime;
 
 public void setArrivalTime(String value) {
    this.arrivalTime = value;
@@ -89,8 +194,6 @@ public String getArrivalTime() {
    return this.arrivalTime;
 }
 
-private int availableSeats;
-
 public void setAvailableSeats(int value) {
    this.availableSeats = value;
 }
@@ -98,8 +201,6 @@ public void setAvailableSeats(int value) {
 public int getAvailableSeats() {
    return this.availableSeats;
 }
-
-private boolean isComplete;
 
 public void setIsComplete(boolean value) {
    this.isComplete = value;
@@ -109,8 +210,6 @@ public boolean getIsComplete() {
    return this.isComplete;
 }
 
-private double fare;
-
 public void setFare(double value) {
    this.fare = value;
 }
@@ -118,8 +217,6 @@ public void setFare(double value) {
 public double getFare() {
    return this.fare;
 }
-
-private Integer estimatedTripDuration;
 
 public void setEstimatedTripDuration(Integer value) {
    this.estimatedTripDuration = value;
@@ -129,8 +226,6 @@ public Integer getEstimatedTripDuration() {
    return this.estimatedTripDuration;
 }
 
-private int driverRating;
-
 public void setDriverRating(int value) {
    this.driverRating = value;
 }
@@ -139,8 +234,6 @@ public int getDriverRating() {
    return this.driverRating;
 }
 
-private int passengerRating;
-
 public void setPassengerRating(int value) {
    this.passengerRating = value;
 }
@@ -148,8 +241,6 @@ public void setPassengerRating(int value) {
 public int getPassengerRating() {
    return this.passengerRating;
 }
-
-private int distance;
 
 public void setDistance(int value) {
    this.distance = value;
@@ -166,13 +257,16 @@ public int getDistance() {
  *           trip        &gt;       passenger
  * </pre>
  */
-private Set<Passenger> passenger;
-
+@JsonIgnore
 public Set<Passenger> getPassenger() {
-   if (this.passenger == null) {
-this.passenger = new HashSet<Passenger>();
+   if (this.passengers == null) {
+this.passengers = new HashSet<Passenger>();
    }
-   return this.passenger;
+   return this.passengers;
+}
+
+public void setPassenger(Set<Passenger> value) {
+	this.passengers = value;
 }
 
 /**
@@ -182,10 +276,9 @@ this.passenger = new HashSet<Passenger>();
  *           trip        &gt;       driver
  * </pre>
  */
-private Driver driver;
 
-public void setDriver(Driver value) {
-   this.driver = value;
+public void setDriver(Driver driver) {
+   this.driver = driver;
 }
 
 public Driver getDriver() {

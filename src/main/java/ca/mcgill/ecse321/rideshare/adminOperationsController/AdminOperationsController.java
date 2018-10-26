@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,7 +14,6 @@ import ca.mcgill.ecse321.rideshare.driverController.DriverService;
 import ca.mcgill.ecse321.rideshare.model.Driver;
 import ca.mcgill.ecse321.rideshare.model.Passenger;
 import ca.mcgill.ecse321.rideshare.model.Trip;
-import ca.mcgill.ecse321.rideshare.model.User;
 import ca.mcgill.ecse321.rideshare.passengerController.PassengerService;
 
 @RestController
@@ -32,7 +32,7 @@ public class AdminOperationsController {
 	// return list of active trips, users and passengers
 	// reutrn top drivers and passengers
 	
-	@RequestMapping("/admin/operations/trips")
+	/*@RequestMapping("/admin/operations/trips")
 	public List<Trip> getAllTrips() {
 		return adminOpService.getAllTrips();
 	}
@@ -51,36 +51,45 @@ public class AdminOperationsController {
 		return adminOpService.getAllActiveTrips();
 	}
 	
-//	@RequestMapping("/admin/operations/trips/active")
+	@RequestMapping(method=RequestMethod.PUT, value = "/admin/operations/trips/{identifier}")
+	public String updateTrip(@RequestBody Trip trip, @PathVariable long identifier) {
+		if(adminOpService.updateTrip(identifier, trip) == null) {
+			return "TRIP COULDN'T BE UPDATED AND HENCE DOESN'T EXISTS";
+		}
+		else {
+			adminOpService.updateTrip(identifier, trip);
+			return "YOU UPDATED A TRIP";
+		}
+	}
 	
-//	public List<Trip> getActiveTrips() {
-//		return adminOpService.getAllActiveTrips();
-//	}
-	
+	@RequestMapping(method=RequestMethod.DELETE, value = "/admin/operations/trips/{identifier}")
+	public Trip deleteTrip(@PathVariable long identifier) {
+		return adminOpService.deleteTrip(identifier);
+	}
 	
 	
 	// USERS END POINTS
 	
 	
-	@RequestMapping("/users")
-	public List<User> getAllUsers() {
-		return adminOpService.getAllUsers();
-	}
+	//@RequestMapping("/users")
+	//public List<User> getAllUsers() {
+	//	return adminOpService.getAllUsers();
+	//}
 	
-	@RequestMapping("/users/active")
-	public List<User> getAllActiveUsers() {
-		return adminOpService.getAllActiveUsers();
-	}
+	//@RequestMapping("/users/active")
+	//public List<User> getAllActiveUsers() {
+	//	return adminOpService.getAllActiveUsers();
+	//}
 	
 	// active drivers and passengers endpoints
-	@RequestMapping("/drivers/active")
-	public List<Driver> getActiveDrivers() {
-		return driverService.getActiveDrivers();
-	}
+	//@RequestMapping("/drivers/active")
+	//public List<Driver> getActiveDrivers() {
+//		return driverService.getActiveDrivers();
+	//}
 	
 	@RequestMapping("/passengers/active")
 	public List<Passenger> getActivePassengers() {
 		return passengerService.getActivePassengers();
-	}
+	}*/
 	
 }

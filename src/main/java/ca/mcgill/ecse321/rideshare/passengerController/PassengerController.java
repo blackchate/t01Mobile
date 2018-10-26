@@ -1,6 +1,7 @@
 package ca.mcgill.ecse321.rideshare.passengerController;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,25 +31,19 @@ public class PassengerController {
 	}
 
 	@RequestMapping(method=RequestMethod.POST, value = "/passengers")
-	public String addPassenger(@RequestBody Passenger passenger) {
+	public void addPassenger(@RequestBody Passenger passenger) {
 		passengerService.addPassenger(passenger);
-		return "YOU ADDED A NEW PASSENGER";
 	}
 	
 	@RequestMapping(method=RequestMethod.PUT, value = "/passengers/{username}")
 	public Passenger updatePassenger(@RequestBody Passenger passenger, @PathVariable String username) {
-		Passenger oldPassenger = passengerService.getPassenger(username); // null if no passenger with that username yet
 		passengerService.updatePassenger(username, passenger);
 		return passenger;
 	}
 
 	@RequestMapping(method=RequestMethod.DELETE, value = "/passengers/{username}")
-	public String deletePassenger(@PathVariable String username) { // TODO: if There's no passenger to remove, return custom message
-		Passenger returnedValue = passengerService.deletePassenger(username);
-		if(returnedValue == null) {
-			return "THERE IS NO PASSENGER WITH THAT USERNAME TO DELETE";
-		}
-		return "YOU DELETED A PASSENGER";
+	public void deletePassenger(@PathVariable String username) { 
+		passengerService.deletePassenger(username);
 	}
 	
 }
