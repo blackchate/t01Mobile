@@ -53,14 +53,7 @@ public class AdminOperationsService {
 			));
 	*/
 	// List of Passengers
-	private List<Passenger> passengers = new ArrayList<>(Arrays.asList(
-			new Passenger("Passenger1", "ddsdsds", 2, "donat@test.com", "01233445", "Alien",
-					"Mars", "myUsername", false, "55555555555"),
-			new Passenger("Passenger2", "Lassdfadtname2", 55, "test@test.com", "555555", "Earthling",
-					"Earth", "another username", false, "7777777777777"),
-			new Passenger("Passenger3", "ssssssss", 901, "earth@test.com", "01233445", "Earthling",
-					"Pacific Ocean", "sdfd", true, "8888888888888")
-			));
+	
 	
 	// List of Users
 	/*private List<User> users = new ArrayList<>(Arrays.asList( // new ArrayList so that drivers list is mutable

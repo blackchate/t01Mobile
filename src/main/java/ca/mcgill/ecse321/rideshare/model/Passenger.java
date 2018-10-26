@@ -4,6 +4,8 @@ import java.util.Set;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 import java.util.HashSet;
 
@@ -12,7 +14,6 @@ import java.util.HashSet;
 public class Passenger implements Serializable {
 	
 	@Id
-	//@Column(name = "passenger_id")
 	private String userName;
 	
 	@Column(name= "status")
@@ -44,35 +45,25 @@ public class Passenger implements Serializable {
 	
 	//SpecificRating specificRating;
 	
-	@ManyToMany(fetch = FetchType.LAZY,
-			cascade = {
-					CascadeType.PERSIST,
+	
+	/*@OneToMany(
+			CascadeType.PERSIST,
 					CascadeType.MERGE
+			)*/
+	@ManyToMany(fetch = FetchType.LAZY,
+			cascade = {CascadeType.ALL
 			})
 	@JoinTable(name = "passenger_trip",
 			joinColumns = { @JoinColumn(name = "passenger_id") },
 			inverseJoinColumns = { @JoinColumn(name = "trip_id") 
 			})
+	//@JsonIgnore
 	private Set<Trip> trips;
 	
 	protected Passenger() {
 		
 	}
 
-	public Passenger(String firstName, String lastName, int age, String email, String phoneNumber, String gender,
-			String address, String userName, boolean isActive, String creditCardNumber) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.age = age;
-		this.email = email;
-		this.phoneNumber = phoneNumber;
-		this.gender = gender;
-		this.address = address;
-		this.userName = userName;
-		this.isActive = isActive;
-		this.creditCardNumber = creditCardNumber;
-	}
-	
 	public Passenger(String firstName, String lastName, int age, String email, String phoneNumber, String gender,
 			String address, String userName, boolean isActive, String creditCardNumber, Set<Trip> trips) {
 		this.firstName = firstName;
@@ -85,8 +76,22 @@ public class Passenger implements Serializable {
 		this.userName = userName;
 		this.isActive = isActive;
 		this.creditCardNumber = creditCardNumber;
-		this.trips = trips;
 	}
+	
+	/*public Passenger(String firstName, String lastName, int age, String email, String phoneNumber, String gender,
+			String address, String userName, boolean isActive, String creditCardNumber, Set<Trip> trips) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
+		this.gender = gender;
+		this.address = address;
+		this.userName = userName;
+		this.isActive = isActive;
+		this.creditCardNumber = creditCardNumber;
+		this.trips = trips;
+	}*/
 	
 	public void setFirstName(String value) {
 		this.firstName = value;
@@ -190,8 +195,8 @@ public class Passenger implements Serializable {
  * </pre>
  */
 
-	public void setTrip(Set<Trip> trips) {
-		this.trips = trips;
+	public void setTrip(Set<Trip> value) {
+		this.trips = value;
 	}
 	
 	public Set<Trip> getTrip() {

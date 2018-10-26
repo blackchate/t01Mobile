@@ -55,55 +55,43 @@ public class TripController {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST, value="/passengers/{passengerId}/trips")
-	public void addTripPassenger(@RequestBody Trip trip, @PathVariable String passengerId) {
+	public Trip addTripPassenger(@RequestBody Trip trip, @PathVariable String passengerId) {
 		Passenger passenger = passengerService.getPassenger(passengerId);
-		//Set<Trip> passengerTrips = passenger.getTrip();
-		//passengerTrips.add(trip);
-		//passenger.setTrip(passengerTrips);
-		//Set<Passenger> tripPassengers = trip.getPassenger();
-		//int age = passenger.getAge();
-		/*tripPassengers.add(new Passenger("", "", age, "", "", "", "", passengerId, true, "", new HashSet<Trip>()  {{
-				add(trip); 
-		}}));
-		trip.setPassenger(tripPassengers);*/
-
 		passenger.setTrip(new HashSet<Trip>() {{
 			add(trip);
 		}});
+		passengerService.updatePassenger(passengerId, passenger);
+		if(trip.getIdentifier() == 0) {
+			tripService.addTrip(trip);
+		}
 		
-		/*int age = passenger.getAge();
-		trip.setPassenger(new HashSet<Passenger>() {{
-			add(new Passenger("","", age, "","", "","", passengerId, true, "", new HashSet<Trip> (){{
-			add(trip);
-			}}));
-		}});*/
 		
-		tripService.addTrip(trip);
+				
+		return trip;
+		
 	}
 
 	@RequestMapping(method=RequestMethod.POST, value="/drivers/{driverId}/trips")
-	public void addTripDriver(@RequestBody Trip trip, @PathVariable String driverId) {
+	public Trip addTripDriver(@RequestBody Trip trip, @PathVariable String driverId) {
 		Driver driver = driverService.getDriver(driverId);
 		int age = driver.getAge();
 		int accountNumber = driver.getAccountNumber();
 		trip.setDriver(new Driver("", "", age, "", "", "",
 			"", driverId, true, accountNumber));
 		tripService.addTrip(trip);
+		return trip;
 	}
 	
 	@RequestMapping(method=RequestMethod.PUT, value="/passengers/{passengerId}/trips/{id}")
-	public void updateTripPassenger(@RequestBody Trip trip, @PathVariable String passengerId, @PathVariable Long id) {
-		//Passenger passenger = passengerService.getPassenger(passengerId);
-		//trip.setPassenger(value);
-		//trip.setPassenger(new HashSet<Passenger>() {{
-		//	add(passenger);
-		//}});
+	public Trip updateTripPassenger(@RequestBody Trip trip, @PathVariable String passengerId, @PathVariable Long id) {
 		tripService.updateTrip(id, trip);		
+		return trip;
 	}
 	
 	@RequestMapping(method=RequestMethod.PUT, value="/drivers/{driverId}/trips/{id}")
-	public void updateTripDriver(@RequestBody Trip trip, @PathVariable String driverId, @PathVariable Long id) {
+	public Trip updateTripDriver(@RequestBody Trip trip, @PathVariable String driverId, @PathVariable Long id) {
 		tripService.updateTrip(id,  trip);
+		return trip;
 	}
 	
 	@RequestMapping(method=RequestMethod.DELETE, value="/passengers/{passengerId}/trips/{id}")

@@ -4,6 +4,7 @@ import java.util.Set;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.io.Serializable;
 import java.util.HashSet;
@@ -54,14 +55,21 @@ public class Trip implements Serializable {
 	@Column(name = "distance")
 	private int distance;
 	
-	@ManyToMany(fetch = FetchType.LAZY,
+	/*@ManyToMany(fetch = FetchType.LAZY,
 			cascade = {CascadeType.PERSIST,
 					CascadeType.MERGE
 			},
+			mappedBy = "trips")*/
+	@ManyToMany(fetch = FetchType.LAZY,
+			cascade = {CascadeType.REMOVE},
 			mappedBy = "trips")
+	
 	private Set<Passenger> passengers;
 	
-	@ManyToOne
+	/* @ManyToOne(fetch = FetchType.LAZY)
+	 private Set<Passenger> passengers;*/
+	
+	@ManyToOne(cascade = CascadeType.REMOVE)
 	private Driver driver;
 
 
@@ -69,7 +77,7 @@ protected Trip() {
 	
 }
 	
-public Trip(String date, String pickUpLocation, String destination, //SpecificRating specificRating, 
+/*public Trip(String date, String pickUpLocation, String destination, //SpecificRating specificRating, 
 		String pickUpTime, String arrivalTime, int availableSeats, boolean isComplete, double fare,
 		Integer estimatedTripDuration, int driverRating, int passengerRating, int distance, Driver driver) {
 	super();
@@ -87,10 +95,32 @@ public Trip(String date, String pickUpLocation, String destination, //SpecificRa
 	this.passengerRating = passengerRating;
 	this.distance = distance;
 	this.driver = driver;
-	this.identifier = identifier;
-}
+	//this.identifier = identifier;
+}*/
 
 public Trip(String date, String pickUpLocation, String destination, //SpecificRating specificRating, 
+		String pickUpTime, String arrivalTime, int availableSeats, boolean isComplete, double fare,
+		Integer estimatedTripDuration, int driverRating, int passengerRating, int distance, Driver driver,long identifier, Set<Passenger> passengers) {
+	super();
+//	this.specificRating = specificRating;
+	this.date = date;
+	this.pickUpLocation = pickUpLocation;
+	this.destination = destination;
+	this.pickUpTime = pickUpTime;
+	this.arrivalTime = arrivalTime;
+	this.availableSeats = availableSeats;
+	this.isComplete = isComplete;
+	this.fare = fare;
+	this.estimatedTripDuration = estimatedTripDuration;
+	this.driverRating = driverRating;
+	this.passengerRating = passengerRating;
+	this.distance = distance;
+	this.driver = driver;
+	this.identifier = identifier;
+	this.passengers = passengers;
+}
+
+/*public Trip(String date, String pickUpLocation, String destination, //SpecificRating specificRating, 
 			String pickUpTime, String arrivalTime, int availableSeats, boolean isComplete, double fare,
 			Integer estimatedTripDuration, int driverRating, int passengerRating, int distance,
 			Set<Passenger> passengers, Driver driver) {
@@ -111,7 +141,7 @@ public Trip(String date, String pickUpLocation, String destination, //SpecificRa
 		this.passengers = passengers;
 		this.driver = driver;
 		this.identifier = identifier;
-	}
+	}*/
 
 // association class with Rating
 //SpecificRating specificRating;
@@ -227,7 +257,7 @@ public int getDistance() {
  *           trip        &gt;       passenger
  * </pre>
  */
-
+@JsonIgnore
 public Set<Passenger> getPassenger() {
    if (this.passengers == null) {
 this.passengers = new HashSet<Passenger>();
