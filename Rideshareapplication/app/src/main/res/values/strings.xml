@@ -7,4 +7,23 @@
     <string name="title_booked_trips">booked trips</string>
     <string name="title_browse_trips">browse trips</string>
     <string name="title_history">history</string>
+
+    // For list of browse trips
+    <string-array name="sources">
+        <item>Montreal</item>
+        <item>Toronto</item>
+        <item>Toronto</item>
+    </string-array>
+
+    <string-array name="destinations">
+        <item>Boston</item>
+        <item>Vancouver</item>
+        <item>Ottawa</item>
+    </string-array>
+
+    <string-array name="prices">
+        <item>30.99</item>
+        <item>40.49</item>
+        <item>70.89</item>
+    </string-array>
 </resources>
