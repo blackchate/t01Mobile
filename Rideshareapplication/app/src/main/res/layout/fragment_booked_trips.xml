@@ -34,37 +34,6 @@
         app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
         app:layout_constraintTop_toTopOf="@+id/constraintLayout3" />
 
-    <Button
-        android:id="@+id/nav_HistoryBtn"
-        android:layout_width="137dp"
-        android:layout_height="60dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="History"
-        android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
-        app:layout_constraintStart_toEndOf="@+id/nav_BrowseBtn" />
-
-    <Button
-        android:id="@+id/nav_BrowseBtn"
-        android:layout_width="137dp"
-        android:layout_height="60dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Browse trips"
-        android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/nav_BookedTripBtn" />
-
-    <Button
-        android:id="@+id/nav_BookedTripBtn"
-        android:layout_width="137dp"
-        android:layout_height="60dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Booked Trip"
-        android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/remSeatsTextView"
         android:layout_width="52dp"
