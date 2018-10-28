@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_booked_trip"
+        android:icon="@drawable/ic_done_all_black_24dp"
+        android:title="@string/title_booked_trips" />
+
+    <item
+        android:id="@+id/nav_browse_trips"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="@string/title_browse_trips" />
+
+    <item
+        android:id="@+id/nav_history"
+        android:icon="@drawable/ic_history_black_24dp"
+        android:title="@string/title_history" />
+</menu>
