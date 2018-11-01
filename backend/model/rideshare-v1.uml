@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_7r45gMUREeiPk6wHWDzjBA" name="rideshare_v1">
+    <eAnnotations xmi:id="_8FxZIMUREeiPk6wHWDzjBA" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_8F7KIMUREeiPk6wHWDzjBA" source="codegen">
+        <details xmi:id="_8F7KIcUREeiPk6wHWDzjBA" key="codegenDirectory" value="/rideshare-v1/src/main/java"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_8Oa-0MUREeiPk6wHWDzjBA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_8Obl4MUREeiPk6wHWDzjBA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_8Obl4cUREeiPk6wHWDzjBA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_8Obl4sUREeiPk6wHWDzjBA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_8OcM8MUREeiPk6wHWDzjBA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_8OcM8cUREeiPk6wHWDzjBA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_8OcM8sUREeiPk6wHWDzjBA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_8Oc0AMUREeiPk6wHWDzjBA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_8OeCIMUREeiPk6wHWDzjBA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_8NpiwMUREeiPk6wHWDzjBA" name="ca">
+      <packagedElement xmi:type="uml:Package" xmi:id="_8Nqw4MUREeiPk6wHWDzjBA" name="mcgill">
+        <packagedElement xmi:type="uml:Package" xmi:id="_8NrX8MUREeiPk6wHWDzjBA" name="ecse321">
+          <packagedElement xmi:type="uml:Package" xmi:id="_8N72oMUREeiPk6wHWDzjBA" name="rideshare">
+            <packagedElement xmi:type="uml:Package" xmi:id="_nIq3oMUSEeiPk6wHWDzjBA" name="model"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_8NzTwMUREeiPk6wHWDzjBA" name="org">
+      <packagedElement xmi:type="uml:Package" xmi:id="_8NzTwcUREeiPk6wHWDzjBA" name="springframework">
+        <packagedElement xmi:type="uml:Package" xmi:id="_8Nz60MUREeiPk6wHWDzjBA" name="boot">
+          <packagedElement xmi:type="uml:Package" xmi:id="_8N0h4MUREeiPk6wHWDzjBA" name="autoconfigure">
+            <packagedElement xmi:type="uml:Interface" xmi:id="_8SrzwMUREeiPk6wHWDzjBA" name="SpringBootApplication"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_8N_hAMUREeiPk6wHWDzjBA" name="test">
+            <packagedElement xmi:type="uml:Package" xmi:id="_8N_hAcUREeiPk6wHWDzjBA" name="context">
+              <packagedElement xmi:type="uml:Interface" xmi:id="_8S09sMUREeiPk6wHWDzjBA" name="SpringBootTest"/>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_8SniUMUREeiPk6wHWDzjBA" name="SpringApplication"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_8OAIEMUREeiPk6wHWDzjBA" name="test">
+          <packagedElement xmi:type="uml:Package" xmi:id="_8OAIEcUREeiPk6wHWDzjBA" name="context">
+            <packagedElement xmi:type="uml:Package" xmi:id="_8OAvIMUREeiPk6wHWDzjBA" name="junit4">
+              <packagedElement xmi:type="uml:Class" xmi:id="_8S3Z8cUREeiPk6wHWDzjBA" name="SpringRunner"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_8N-S4MUREeiPk6wHWDzjBA" name="junit">
+        <packagedElement xmi:type="uml:Package" xmi:id="_8N-58MUREeiPk6wHWDzjBA" name="runner">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_8Sx6YMUREeiPk6wHWDzjBA" name="RunWith"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_8Su3EMUREeiPk6wHWDzjBA" name="Test"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_DeMUAMUZEeiPk6wHWDzjBA" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_DeM7EMUZEeiPk6wHWDzjBA" name="util">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_DelVkMUZEeiPk6wHWDzjBA" name="Set"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_DfpFgcUZEeiPk6wHWDzjBA" name="HashSet"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_DeNiIMUZEeiPk6wHWDzjBA" name="javax">
+      <packagedElement xmi:type="uml:Package" xmi:id="_DeNiIcUZEeiPk6wHWDzjBA" name="persistence">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_DfacAMUZEeiPk6wHWDzjBA" name="Entity"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_NurFUMUZEeiPk6wHWDzjBA" name="Id"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_8F_bkMUREeiPk6wHWDzjBA">
+      <eAnnotations xmi:id="_8GGwUMUREeiPk6wHWDzjBA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+    <profileApplication xmi:id="_Dd71UMUZEeiPk6wHWDzjBA">
+      <eAnnotations xmi:id="_Dd8cYMUZEeiPk6wHWDzjBA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PERSISTENCY_PROFILES/Persistency.profile.uml#Persistency_2-Annotation-Persistency"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://PERSISTENCY_PROFILES/Persistency.profile.uml#Persistency_2"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_8GULsMUREeiPk6wHWDzjBA" base_Package="_7r45gMUREeiPk6wHWDzjBA">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:Reference xmi:id="_8Sp-kMUREeiPk6wHWDzjBA" base_Element="_8SniUMUREeiPk6wHWDzjBA"/>
+  <UMLLabProfile:Reference xmi:id="_8Sto8MUREeiPk6wHWDzjBA" base_Element="_8SrzwMUREeiPk6wHWDzjBA"/>
+  <UMLLabProfile:Reference xmi:id="_8SwsQMUREeiPk6wHWDzjBA" base_Element="_8Su3EMUREeiPk6wHWDzjBA"/>
+  <UMLLabProfile:Reference xmi:id="_8SzvkMUREeiPk6wHWDzjBA" base_Element="_8Sx6YMUREeiPk6wHWDzjBA"/>
+  <UMLLabProfile:Reference xmi:id="_8S3Z8MUREeiPk6wHWDzjBA" base_Element="_8S09sMUREeiPk6wHWDzjBA"/>
+  <UMLLabProfile:Reference xmi:id="_8S52MMUREeiPk6wHWDzjBA" base_Element="_8S3Z8cUREeiPk6wHWDzjBA"/>
+  <UMLLabProfile:Reference xmi:id="_DfWKkMUZEeiPk6wHWDzjBA" base_Element="_DelVkMUZEeiPk6wHWDzjBA"/>
+  <UMLLabProfile:Reference xmi:id="_DfpFgMUZEeiPk6wHWDzjBA" base_Element="_DfacAMUZEeiPk6wHWDzjBA"/>
+  <UMLLabProfile:Reference xmi:id="_Df8ngMUZEeiPk6wHWDzjBA" base_Element="_DfpFgcUZEeiPk6wHWDzjBA"/>
+  <UMLLabProfile:Reference xmi:id="_Nu2rgMUZEeiPk6wHWDzjBA" base_Element="_NurFUMUZEeiPk6wHWDzjBA"/>
+</xmi:XMI>
