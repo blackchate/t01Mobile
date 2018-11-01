@@ -46,16 +46,18 @@
 
     <TextView
         android:id="@+id/timeTextView"
-        android:layout_width="51dp"
+        android:layout_width="107dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/sourceTextView"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="255dp"
-        android:layout_marginEnd="78dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginStart="237dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="-1dp"
         android:text="17:00"
-        android:textSize="10sp" />
+        android:textSize="18sp" />
 
     <ImageView
         android:id="@+id/imageView"
