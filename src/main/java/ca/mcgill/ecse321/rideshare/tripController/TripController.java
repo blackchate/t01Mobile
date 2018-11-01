@@ -1,7 +1,5 @@
 package ca.mcgill.ecse321.rideshare.tripController;
 
-import static org.assertj.core.api.Assertions.setAllowComparingPrivateFields;
-
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
