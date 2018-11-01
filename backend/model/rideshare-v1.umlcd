@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_7uBngMUREeiPk6wHWDzjBA">
+  <modelElement href="rideshare-v1.uml#_8N72oMUREeiPk6wHWDzjBA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ContainmentVisual" xmi:id="_nIsFwMUSEeiPk6wHWDzjBA" sourceAnchor="39.0,16.0" targetAnchor="47.0,54.0" enclosingItem="_Td3g8MUSEeiPk6wHWDzjBA" containedItem="_nItT4MUSEeiPk6wHWDzjBA"/>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:PackageVisual" xmi:id="_Td3g8MUSEeiPk6wHWDzjBA" containments="_nIsFwMUSEeiPk6wHWDzjBA" name="rideshare" nestedPackages="_nItT4MUSEeiPk6wHWDzjBA">
+    <modelElement href="rideshare-v1.uml#_8N72oMUREeiPk6wHWDzjBA"/>
+    <visualProperties xmi:id="_Td3g8cUSEeiPk6wHWDzjBA" position="364.0,39.0" size="-1.0,-1.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:PackageVisual" xmi:id="_nItT4MUSEeiPk6wHWDzjBA" containment="_nIsFwMUSEeiPk6wHWDzjBA" name="model" nestingPackage="_Td3g8MUSEeiPk6wHWDzjBA">
+    <modelElement href="rideshare-v1.uml#_nIq3oMUSEeiPk6wHWDzjBA"/>
+    <visualProperties xmi:id="_nItT4cUSEeiPk6wHWDzjBA" position="372.0,160.0" size="-1.0,-1.0"/>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
