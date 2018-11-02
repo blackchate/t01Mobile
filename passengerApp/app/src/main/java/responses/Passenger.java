@@ -1,6 +1,8 @@
-package ca.mcgill.cs.ecse321.rideshareapplication.ca.mcgill.cs.ecse321.redeshareapplication.responseclasses;
+package responses;
 
-public class Driver {
+import java.util.Set;
+
+public class Passenger {
 
     private String firstName;
     private String lastName;
@@ -11,9 +13,10 @@ public class Driver {
     private String address;
     private String userName;
     private boolean isActive;
-    private int accountNumber;
+    private String creditCardNumber;
+    private Set<Trip> trips;
 
-    public Driver(String firstName, String lastName, int age, String email, String phoneNumber, String gender, String address, String userName, boolean isActive, int accountNumber) {
+    public Passenger(String firstName, String lastName, int age, String email, String phoneNumber, String gender, String address, String userName, boolean isActive, String creditCardNumber, Set<Trip> trips) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -23,7 +26,8 @@ public class Driver {
         this.address = address;
         this.userName = userName;
         this.isActive = isActive;
-        this.accountNumber = accountNumber;
+        this.creditCardNumber = creditCardNumber;
+        this.trips = trips;
     }
 
     public String getFirstName() {
@@ -98,11 +102,19 @@ public class Driver {
         isActive = active;
     }
 
-    public int getAccountNumber() {
-        return accountNumber;
+    public String getCreditCardNumber() {
+        return creditCardNumber;
     }
 
-    public void setAccountNumber(int accountNumber) {
-        this.accountNumber = accountNumber;
+    public void setCreditCardNumber(String creditCardNumber) {
+        this.creditCardNumber = creditCardNumber;
+    }
+
+    public Set<Trip> getTrips() {
+        return trips;
+    }
+
+    public void setTrips(Set<Trip> trips) {
+        this.trips = trips;
     }
 }

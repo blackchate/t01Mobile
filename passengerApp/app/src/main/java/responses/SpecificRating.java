@@ -1,4 +1,4 @@
-package ca.mcgill.cs.ecse321.rideshareapplication.ca.mcgill.cs.ecse321.redeshareapplication.responseclasses;
+package responses;
 
 public class SpecificRating {
 
