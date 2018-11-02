@@ -4,8 +4,6 @@ import java.util.Set;
 
 import javax.persistence.*;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import java.io.Serializable;
 import java.util.HashSet;
 
@@ -46,18 +44,14 @@ public class Passenger implements Serializable {
 	//SpecificRating specificRating;
 	
 	
-	/*@OneToMany(
-			CascadeType.PERSIST,
-					CascadeType.MERGE
-			)*/
-	@ManyToMany(fetch = FetchType.LAZY,
-			cascade = {CascadeType.ALL
+	
+	@ManyToMany(fetch = FetchType.EAGER,
+			cascade = {CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST, CascadeType.REMOVE
 			})
 	@JoinTable(name = "passenger_trip",
 			joinColumns = { @JoinColumn(name = "passenger_id") },
 			inverseJoinColumns = { @JoinColumn(name = "trip_id") 
 			})
-	//@JsonIgnore
 	private Set<Trip> trips;
 	
 	protected Passenger() {
@@ -77,21 +71,6 @@ public class Passenger implements Serializable {
 		this.isActive = isActive;
 		this.creditCardNumber = creditCardNumber;
 	}
-	
-	/*public Passenger(String firstName, String lastName, int age, String email, String phoneNumber, String gender,
-			String address, String userName, boolean isActive, String creditCardNumber, Set<Trip> trips) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.age = age;
-		this.email = email;
-		this.phoneNumber = phoneNumber;
-		this.gender = gender;
-		this.address = address;
-		this.userName = userName;
-		this.isActive = isActive;
-		this.creditCardNumber = creditCardNumber;
-		this.trips = trips;
-	}*/
 	
 	public void setFirstName(String value) {
 		this.firstName = value;

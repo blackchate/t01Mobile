@@ -14,7 +14,6 @@ import java.util.HashSet;
 public class Trip implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	//@Column(name = "trip_id")
 	private long identifier;
 	//When you create a new trip, this is null
 	
@@ -55,19 +54,11 @@ public class Trip implements Serializable {
 	@Column(name = "distance")
 	private int distance;
 	
-	/*@ManyToMany(fetch = FetchType.LAZY,
-			cascade = {CascadeType.PERSIST,
-					CascadeType.MERGE
-			},
-			mappedBy = "trips")*/
 	@ManyToMany(fetch = FetchType.LAZY,
-			cascade = {CascadeType.REMOVE},
+			cascade = {CascadeType.REMOVE, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST},
 			mappedBy = "trips")
 	
-	private Set<Passenger> passengers;
-	
-	/* @ManyToOne(fetch = FetchType.LAZY)
-	 private Set<Passenger> passengers;*/
+	private Set<Passenger> passenger;
 	
 	@ManyToOne(cascade = CascadeType.REMOVE)
 	private Driver driver;
@@ -76,31 +67,10 @@ public class Trip implements Serializable {
 protected Trip() {
 	
 }
-	
-/*public Trip(String date, String pickUpLocation, String destination, //SpecificRating specificRating, 
-		String pickUpTime, String arrivalTime, int availableSeats, boolean isComplete, double fare,
-		Integer estimatedTripDuration, int driverRating, int passengerRating, int distance, Driver driver) {
-	super();
-//	this.specificRating = specificRating;
-	this.date = date;
-	this.pickUpLocation = pickUpLocation;
-	this.destination = destination;
-	this.pickUpTime = pickUpTime;
-	this.arrivalTime = arrivalTime;
-	this.availableSeats = availableSeats;
-	this.isComplete = isComplete;
-	this.fare = fare;
-	this.estimatedTripDuration = estimatedTripDuration;
-	this.driverRating = driverRating;
-	this.passengerRating = passengerRating;
-	this.distance = distance;
-	this.driver = driver;
-	//this.identifier = identifier;
-}*/
 
 public Trip(String date, String pickUpLocation, String destination, //SpecificRating specificRating, 
 		String pickUpTime, String arrivalTime, int availableSeats, boolean isComplete, double fare,
-		Integer estimatedTripDuration, int driverRating, int passengerRating, int distance, Driver driver,long identifier, Set<Passenger> passengers) {
+		Integer estimatedTripDuration, int driverRating, int passengerRating, int distance, Driver driver,long identifier, Set<Passenger> passenger) {
 	super();
 //	this.specificRating = specificRating;
 	this.date = date;
@@ -117,31 +87,8 @@ public Trip(String date, String pickUpLocation, String destination, //SpecificRa
 	this.distance = distance;
 	this.driver = driver;
 	this.identifier = identifier;
-	this.passengers = passengers;
+	this.passenger = passenger;
 }
-
-/*public Trip(String date, String pickUpLocation, String destination, //SpecificRating specificRating, 
-			String pickUpTime, String arrivalTime, int availableSeats, boolean isComplete, double fare,
-			Integer estimatedTripDuration, int driverRating, int passengerRating, int distance,
-			Set<Passenger> passengers, Driver driver) {
-		//super();
-//		this.specificRating = specificRating;
-		this.date = date;
-		this.pickUpLocation = pickUpLocation;
-		this.destination = destination;
-		this.pickUpTime = pickUpTime;
-		this.arrivalTime = arrivalTime;
-		this.availableSeats = availableSeats;
-		this.isComplete = isComplete;
-		this.fare = fare;
-		this.estimatedTripDuration = estimatedTripDuration;
-		this.driverRating = driverRating;
-		this.passengerRating = passengerRating;
-		this.distance = distance;
-		this.passengers = passengers;
-		this.driver = driver;
-		this.identifier = identifier;
-	}*/
 
 // association class with Rating
 //SpecificRating specificRating;
@@ -259,14 +206,14 @@ public int getDistance() {
  */
 @JsonIgnore
 public Set<Passenger> getPassenger() {
-   if (this.passengers == null) {
-this.passengers = new HashSet<Passenger>();
+   if (this.passenger == null) {
+this.passenger = new HashSet<Passenger>();
    }
-   return this.passengers;
+   return this.passenger;
 }
 
 public void setPassenger(Set<Passenger> value) {
-	this.passengers = value;
+	this.passenger = value;
 }
 
 /**

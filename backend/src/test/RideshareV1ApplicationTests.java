@@ -47,7 +47,7 @@ import static org.junit.Assert.*;
 
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
-
+/*
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class RideshareV1ApplicationTests {
@@ -182,4 +182,4 @@ public class RideshareV1ApplicationTests {
   		assertEquals(ucontrol.getUser(NONEXISTING_USERKEY), UsersController.ERROR_NOT_FOUND_MESSAGE);
 	}
 
-}
+}*/
