@@ -17,6 +17,15 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Controller implements Callback<ArrayList<Trip>> {
 
     static final String BASE_URL = "https://shrouded-fjord-72003.herokuapp.com/";
+    public static ArrayList<Trip> trips;
+
+    public ArrayList<Trip> getTrips() {
+        return trips;
+    }
+
+    public void setTrips(ArrayList<Trip> trips) {
+        this.trips = trips;
+    }
 
     public void start() {
         Gson gson = new GsonBuilder()
@@ -36,13 +45,17 @@ public class Controller implements Callback<ArrayList<Trip>> {
 
     @Override
     public void onResponse(Call<ArrayList<Trip>> call, Response<ArrayList<Trip>> response) {
+        ArrayList<Trip> tripsArrayList;
         if(response.isSuccessful()) {
-            ArrayList<Trip> tripsArrayList = response.body();
-            Log.d("Testsss", "test");
-            for(Trip trip : tripsArrayList) {
-                Log.d("sourceTest", trip.getPickUpLocation());
-                Log.d("destinationTest", trip.getDestination());
-            }
+            tripsArrayList = response.body();
+
+            trips = tripsArrayList;
+
+//            Log.d("Testsss", "test");
+//            for(Trip trip : tripsArrayList) {
+//                Log.d("insidebrowse", trip.getPickUpLocation());
+//                Log.d("insidebrowse", trip.getDestination());
+//            }
         } else {
             // do nothing
         }

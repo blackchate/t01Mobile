@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -35,8 +36,10 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new BrowseTripsFragment()).commit(); // opens browse_trips fragment first
         bottomNav.getMenu().getItem(1).setChecked(true); // on startup, Browse Trip is selected
 
-        Controller tripsController = new Controller();
-        tripsController.start();
+//        Controller tripsController = new Controller();
+//        tripsController.start();
+
+        //Log.d("pleasework", tripsController.getTrips().get(0).getPickUpLocation());
 
         // calling rest
 //        Retrofit retrofit = new Retrofit.Builder()
