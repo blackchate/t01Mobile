@@ -50,7 +50,7 @@ public class PassengerService {
 	public Optional<Passenger> deletePassenger(String username) {
 		Optional<Passenger> passengerToDelete = passengerRepo.findById(username);
 		tripRepo.deleteByPassengersUserName(username);
-		passengerRepo.deleteById(username);
+	//	passengerRepo.deleteById(username);
 		return passengerToDelete;
 	}
 	
