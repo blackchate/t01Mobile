@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Display;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -49,7 +51,7 @@ public class DetailActivity extends AppCompatActivity {
         //get the text views from the activity
         TextView originView = (TextView) findViewById(R.id.origin);
         TextView destinationView = (TextView) findViewById(R.id.destination);
-        TextView seatsView = (TextView) findViewById(R.id.seats);
+         TextView seatsView = (TextView) findViewById(R.id.seats);
         TextView stopsView = (TextView) findViewById(R.id.stops);
         TextView driverNameView = (TextView) findViewById(R.id.driverName);
         TextView carDescView = (TextView) findViewById(R.id.carDesc);
@@ -68,6 +70,21 @@ public class DetailActivity extends AppCompatActivity {
 
         scaleImg(img,driverPic);
 
+
+
+        //deal with the edit button
+        Button editBtn = (Button) findViewById(R.id.editButton);
+        editBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent editIntent = new Intent(getApplicationContext(), EditActivity.class);
+                //pass the textViews to the other activity to edit
+              //  editIntent.putExtra;
+                startActivity(editIntent);
+
+
+            }
+        });
 
     }
 

@@ -2,8 +2,6 @@
     <string name="app_name">TrialApp</string>
 
 
-
-
     <string name="driverName">Jason Stathan</string>
     <string name="carDesc">Audi 2018 R8 Coupe</string>
 
@@ -47,7 +45,6 @@
     </string-array>
 
 
-
     <!--Create a string array to store the items in the list-->
     <string-array name="items">
         <item>peach</item>
@@ -68,8 +65,6 @@
         <item>Fresh tomatoes from Ohio</item>
         <item>Fresh squash from California</item>
     </string-array>
-
-
 
 
 </resources>
