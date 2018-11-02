@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new BrowseTripsFragment()).commit(); // opens browse_trips fragment first
-        bottomNav.getMenu().getItem(1).setChecked(true); // on startup, Browse Trips is selected
+        bottomNav.getMenu().getItem(1).setChecked(true); // on startup, Browse Trip is selected
 
 ////        // setting up ListView for browse trips
 //        ListView myListView;
