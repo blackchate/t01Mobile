@@ -12,6 +12,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+
+import responses.Trip;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
         // setting up bottom nav on start up
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
@@ -29,27 +35,30 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new BrowseTripsFragment()).commit(); // opens browse_trips fragment first
         bottomNav.getMenu().getItem(1).setChecked(true); // on startup, Browse Trip is selected
 
-////        // setting up ListView for browse trips
-//        ListView myListView;
+        Controller tripsController = new Controller();
+        tripsController.start();
+
+        // calling rest
+//        Retrofit retrofit = new Retrofit.Builder()
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .build();
 //
-////        // these will all come from trip objects from the server
-//        String[] sources;
-//        String[] destinations;
-//        String[] prices;
+//        API api = retrofit.create(API.class);
+//        Call<ArrayList<Trip>> call = api.getTrips();
 //
-//        Resources res = getResources();
+//        call.enqueue(new Callback<ArrayList<Trip>>() {
+//            @Override
+//            public void onResponse(Call<ArrayList<Trip>> call, Response<ArrayList<Trip>> response) {
+//                //ArrayList<Trip> tripsResponse = response.body();
 //
-//        myListView = (ListView)findViewById(R.id.myListView);
-//        sources = res.getStringArray(R.array.sources);
-//        destinations = res.getStringArray(R.array.destinations);
-//        prices = res.getStringArray(R.array.prices);
+//            }
 //
-//        myListView.setAdapter(new ArrayAdapter<String>(this, R.layout.browse_trip_textview, sources));
+//            @Override
+//            public void onFailure(Call<ArrayList<Trip>> call, Throwable t) {
 //
-//        /*
-//        ItemAdapter itemAdapter = new ItemAdapter(this, sources, destinations, prices);
-//        myListView.setAdapter(itemAdapter);
-//        */
+//            }
+//        });
+
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =

@@ -1,6 +1,13 @@
 package ca.mcgill.cs.ecse321.rideshareapplication;
 
+import java.util.ArrayList;
+
+import responses.Trip;
+import retrofit2.Call;
+import retrofit2.http.GET;
+
 public interface API {
 
-    String BASE_URL = "https://shrouded-fjord-72003.herokuapp.com/";
+    @GET("trips")
+    Call<ArrayList<Trip>> getTrips();
 }
