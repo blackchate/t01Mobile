@@ -36,9 +36,7 @@ public class TripService {
 	@Transactional
 	public List<Trip> getAllTripsByPassenger(String username) {
 		List<Trip> trips = new ArrayList<>();
-		//Passenger passenger = passengerRepo.findByUserName(username);
-		//passenger.getTrip().forEach(trips::add);
-		tripRepo.findByPassengersUserName(username).forEach(trips::add);
+		tripRepo.findByPassengerUserName(username).forEach(trips::add);
 		
 		return trips;
 	}

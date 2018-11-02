@@ -3,13 +3,11 @@ package ca.mcgill.ecse321.rideshare.tripController;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import ca.mcgill.ecse321.rideshare.driverController.DriverService;
-import ca.mcgill.ecse321.rideshare.model.Car;
 import ca.mcgill.ecse321.rideshare.model.Driver;
 import ca.mcgill.ecse321.rideshare.model.Passenger;
 import ca.mcgill.ecse321.rideshare.model.Trip;
@@ -61,10 +59,7 @@ public class TripController {
 		passengerService.updatePassenger(passengerId, passenger);
 		if(trip.getIdentifier() == 0) {
 			tripService.addTrip(trip);
-		}
-		
-		
-				
+		}		
 		return trip;
 		
 	}

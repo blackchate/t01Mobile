@@ -41,12 +41,6 @@ public class Driver implements Serializable {
 	@Column(name = "accountNumber")
 	private int accountNumber;
 	
-	//@OneToOne(cascade = CascadeType.ALL)
-	//@JoinColumn(name = "car_id")
-	//private Car car;
-	
-	//@Column(name = "trip")
-	//private Set<Trip> trip;
 	
 	protected Driver () {
 	}
@@ -158,37 +152,5 @@ public class Driver implements Serializable {
 	public int getAccountNumber() {
 		return this.accountNumber;
 	}
-
-	/**
-	 * <pre>
-	 *           1..1     1..1
-	 * Driver ------------------------- Car
-	 *           driver        &lt;       car
-	 * </pre>
-	 */
-	
-
-	/*public void setCar(Car value) {
-		this.car = value;
-	}
-
-	public Car getCar() {
-		return this.car;
-	}*/
-
-	/**
-	 * <pre>
-	 *           1..1     0..*
-	 * Driver ------------------------- Trip
-	 *           driver        &lt;       trip
-	 * </pre>
-	 */
-
-	/*public Set<Trip> getTrip() {
-		if (this.trip == null) {
-			this.trip = new HashSet<Trip>();
-		}
-		return this.trip;
-	}*/
 
 }

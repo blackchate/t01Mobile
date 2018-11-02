@@ -19,7 +19,7 @@ import ca.mcgill.ecse321.rideshare.passengerController.PassengerService;
 @RestController
 
 public class AdminOperationsController {
-	@Autowired
+	/*@Autowired
 	private AdminOperationsService adminOpService;
 	
 	@Autowired
