@@ -11,7 +11,6 @@ public interface TripRepository extends CrudRepository<Trip, String> {
 
 	public Optional<Trip> findByIdentifier(Long identifier);
 	public Optional<Trip> deleteByIdentifier(Long identifier);
-	public List<Trip> findByPassengersUserName(String username);
+	public List<Trip> findByPassengerUserName(String username);
 	public List<Trip> findByDriverUserName(String username);
-	public Optional<Trip> deleteByPassengersUserName(String username);
 }

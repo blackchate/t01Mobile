@@ -2,15 +2,23 @@ package ca.mcgill.ecse321.rideshare.passengerController;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
+import javax.persistence.PostRemove;
+import javax.persistence.PreRemove;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import ca.mcgill.ecse321.rideshare.model.Driver;
 import ca.mcgill.ecse321.rideshare.model.Passenger;
+import ca.mcgill.ecse321.rideshare.model.Trip;
 import ca.mcgill.ecse321.rideshare.repo.PassengerRepository;
 import ca.mcgill.ecse321.rideshare.repo.TripRepository;
 
@@ -47,9 +55,9 @@ public class PassengerService {
 	}
 	
 	@Transactional
-	public Optional<Passenger> deletePassenger(String username) {
-		Optional<Passenger> passengerToDelete = passengerRepo.findById(username);
-		tripRepo.deleteByPassengersUserName(username);
+	public Passenger deletePassenger(String username) {
+		Passenger passengerToDelete = passengerRepo.findByUserName(username);
+		passengerToDelete.getTrip().removeAll(passengerToDelete.getTrip());
 		passengerRepo.deleteById(username);
 		return passengerToDelete;
 	}
