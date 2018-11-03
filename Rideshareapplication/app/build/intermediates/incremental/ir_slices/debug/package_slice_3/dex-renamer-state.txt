@@ -1,0 +1,4 @@
+#Wed Oct 31 18:57:16 EDT 2018
+base.0=/Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/build/intermediates/transforms/dexMerger/debug/3
+path.0=classes.dex
+renamed.0=classes.dex

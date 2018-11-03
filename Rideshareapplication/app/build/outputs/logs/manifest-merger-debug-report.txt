@@ -1,0 +1,180 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:2:1-29:12
+MERGED from [com.android.support:design:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b21ba793e308bb26dfed97a0cb878915/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4d69502962946d9075dc1ab0d37b695a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b2e3e78dc94d92240eb5831a96950358/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/9c35e19bea0adcec76b6074dc0544ae6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/254ba361dfef230f3f8a3cada31edbd2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/2d59585df946f48476eb5ddb441b5c82/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/2da591723541b49dac29d73814b31ee3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/2fbcbd31282023c9ab4b366e0c4e3080/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/9cfee02fe6e052a9fe7532b41a74b719/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/c6c5cf268c5eb97dc96101c7589b1bf6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/ce156a750fe82ba57d002d9601fb3ab7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/73a7063e8757912c449710ba997b9c43/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/71cc3110d000e34813ea27e936b4dee2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/a522788959a6493d6d815ce077b09a04/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/f4c4beeb8372ac9a58c65a85231cdf8a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/bcb9e48b7706dfec8649c3f5fd30d138/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/d509be253d3e453aeebb1ce2a7dda190/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/282dc9f9815855a8835917d6bf33294f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8b539b16111a8f94b71f97f5a88b21cd/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/df4406c7dbfdf31a78904fb0cdc477ac/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/9b7e281674649f925c88bd6caf308ebf/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/097710856dd89aadb8186a0bbd8b8786/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/4ce0eb187ee2afcea8f35e6dc111164c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/a395f5e2f79575097b9e08deccf64c0b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/783892012b92b348b21acc4961f14ba5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/5710a6d48751041fca2b1dbaded67c7a/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/658bc09f7575589a6938e87294ed5c90/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/55a1044a419ade99e1a3dbef0e5a67f7/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/67f085c0e5988011fbb057bd0b4de8e7/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/ca8575e1b5567cdc1c9d97cbf7ad1a64/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/beb4dcbce270124c1ce3fc0ef8355b56/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:2:1-29:12
+	package
+		ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:3:5-56
+		INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:2:1-29:12
+		INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:2:1-29:12
+		INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:4:22-64
+application
+ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:6:5-27:19
+MERGED from [com.android.support:design:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b21ba793e308bb26dfed97a0cb878915/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b21ba793e308bb26dfed97a0cb878915/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b2e3e78dc94d92240eb5831a96950358/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b2e3e78dc94d92240eb5831a96950358/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8b539b16111a8f94b71f97f5a88b21cd/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8b539b16111a8f94b71f97f5a88b21cd/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/df4406c7dbfdf31a78904fb0cdc477ac/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/df4406c7dbfdf31a78904fb0cdc477ac/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8b539b16111a8f94b71f97f5a88b21cd/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:11:9-35
+	android:label
+		ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:9:9-35
+	android:roundIcon
+		ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:10:9-47
+	android:icon
+		ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:8:9-42
+	android:allowBackup
+		ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:7:9-35
+	android:theme
+		ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:12:9-40
+activity#ca.mcgill.cs.ecse321.rideshareapplication.MainActivity
+ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:13:9-21:20
+	android:label
+		ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:15:13-45
+	android:name
+		ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:14:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:16:13-20:29
+action#android.intent.action.MAIN
+ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:17:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:19:27-74
+meta-data#preloaded_fonts
+ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:23:9-25:57
+	android:resource
+		ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:25:13-54
+	android:name
+		ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml:24:13-43
+uses-sdk
+INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml
+INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b21ba793e308bb26dfed97a0cb878915/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/b21ba793e308bb26dfed97a0cb878915/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4d69502962946d9075dc1ab0d37b695a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/4d69502962946d9075dc1ab0d37b695a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b2e3e78dc94d92240eb5831a96950358/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b2e3e78dc94d92240eb5831a96950358/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/9c35e19bea0adcec76b6074dc0544ae6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/9c35e19bea0adcec76b6074dc0544ae6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/254ba361dfef230f3f8a3cada31edbd2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/254ba361dfef230f3f8a3cada31edbd2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/2d59585df946f48476eb5ddb441b5c82/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/2d59585df946f48476eb5ddb441b5c82/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/2da591723541b49dac29d73814b31ee3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-28.0.0.aar/2da591723541b49dac29d73814b31ee3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/2fbcbd31282023c9ab4b366e0c4e3080/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/2fbcbd31282023c9ab4b366e0c4e3080/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/9cfee02fe6e052a9fe7532b41a74b719/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/9cfee02fe6e052a9fe7532b41a74b719/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/c6c5cf268c5eb97dc96101c7589b1bf6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/transition-28.0.0.aar/c6c5cf268c5eb97dc96101c7589b1bf6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/ce156a750fe82ba57d002d9601fb3ab7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/ce156a750fe82ba57d002d9601fb3ab7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/73a7063e8757912c449710ba997b9c43/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/73a7063e8757912c449710ba997b9c43/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/71cc3110d000e34813ea27e936b4dee2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/71cc3110d000e34813ea27e936b4dee2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/a522788959a6493d6d815ce077b09a04/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/a522788959a6493d6d815ce077b09a04/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/f4c4beeb8372ac9a58c65a85231cdf8a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/f4c4beeb8372ac9a58c65a85231cdf8a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/bcb9e48b7706dfec8649c3f5fd30d138/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/bcb9e48b7706dfec8649c3f5fd30d138/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/d509be253d3e453aeebb1ce2a7dda190/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/d509be253d3e453aeebb1ce2a7dda190/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/282dc9f9815855a8835917d6bf33294f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/282dc9f9815855a8835917d6bf33294f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8b539b16111a8f94b71f97f5a88b21cd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8b539b16111a8f94b71f97f5a88b21cd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/df4406c7dbfdf31a78904fb0cdc477ac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/df4406c7dbfdf31a78904fb0cdc477ac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/9b7e281674649f925c88bd6caf308ebf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/9b7e281674649f925c88bd6caf308ebf/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/097710856dd89aadb8186a0bbd8b8786/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/cardview-v7-28.0.0.aar/097710856dd89aadb8186a0bbd8b8786/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/4ce0eb187ee2afcea8f35e6dc111164c/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/4ce0eb187ee2afcea8f35e6dc111164c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/a395f5e2f79575097b9e08deccf64c0b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/a395f5e2f79575097b9e08deccf64c0b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/783892012b92b348b21acc4961f14ba5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/783892012b92b348b21acc4961f14ba5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/5710a6d48751041fca2b1dbaded67c7a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/5710a6d48751041fca2b1dbaded67c7a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/658bc09f7575589a6938e87294ed5c90/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/658bc09f7575589a6938e87294ed5c90/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/55a1044a419ade99e1a3dbef0e5a67f7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/55a1044a419ade99e1a3dbef0e5a67f7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/67f085c0e5988011fbb057bd0b4de8e7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/67f085c0e5988011fbb057bd0b4de8e7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/ca8575e1b5567cdc1c9d97cbf7ad1a64/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/ca8575e1b5567cdc1c9d97cbf7ad1a64/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/beb4dcbce270124c1ce3fc0ef8355b56/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/Hongbear/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/beb4dcbce270124c1ce3fc0ef8355b56/AndroidManifest.xml:20:5-44
+INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml
+INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Hongbear/Documents/GitHub/t01/Rideshareapplication/app/src/main/AndroidManifest.xml
