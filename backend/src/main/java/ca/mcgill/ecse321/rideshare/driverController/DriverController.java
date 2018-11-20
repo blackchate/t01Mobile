@@ -14,6 +14,7 @@ import ca.mcgill.ecse321.rideshare.model.Car;
 import ca.mcgill.ecse321.rideshare.model.Driver;
 import ca.mcgill.ecse321.rideshare.repo.DriverRepository;
 
+@CrossOrigin
 @RestController
 public class DriverController {
 
