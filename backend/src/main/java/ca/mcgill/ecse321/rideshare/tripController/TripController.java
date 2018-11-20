@@ -13,6 +13,7 @@ import ca.mcgill.ecse321.rideshare.model.Passenger;
 import ca.mcgill.ecse321.rideshare.model.Trip;
 import ca.mcgill.ecse321.rideshare.passengerController.*;
 
+@CrossOrigin
 @RestController
 public class TripController {
 	
