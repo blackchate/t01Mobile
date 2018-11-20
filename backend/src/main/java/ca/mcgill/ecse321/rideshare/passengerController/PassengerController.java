@@ -15,6 +15,7 @@ import ca.mcgill.ecse321.rideshare.model.Passenger;
 
 @CrossOrigin
 @RestController
+
 public class PassengerController {
 	
 	@Autowired
