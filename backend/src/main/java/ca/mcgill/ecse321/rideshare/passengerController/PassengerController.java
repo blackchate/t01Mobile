@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import ca.mcgill.ecse321.rideshare.model.Passenger;
 
+@CrossOrigin
 @RestController
 public class PassengerController {
 	
