@@ -14,7 +14,7 @@ import java.util.HashSet;
 public class Trip implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long identifier;
+	private Long identifier;
 	//When you create a new trip, this is null
 	
 	@Column(name = "date")
@@ -34,25 +34,28 @@ public class Trip implements Serializable {
 	private String arrivalTime;
 	
 	@Column(name = "availableSeats")
-	private int availableSeats;
+	private Integer availableSeats;
 	
-	@Column(name = "status")
-	private boolean isComplete;
+	@Column(name = "arrivalStatus")
+	private Boolean isComplete;
+	
+	@Column(name = "departureStatus")
+	private Boolean hasStarted;
 	
 	@Column(name = "fare")
-	private double fare;
+	private Double fare;
 
 	@Column(name = "estimatedTripDuration")
 	private Integer estimatedTripDuration;
 	
 	@Column(name = "driverRating")
-	private int driverRating;
+	private Integer driverRating;
 	
 	@Column(name = "passengerRating")
-	private int passengerRating;
+	private Integer passengerRating;
 	
 	@Column(name = "distance")
-	private int distance;
+	private Integer distance;
 	
 	@ManyToMany(fetch = FetchType.LAZY,
 			cascade = {CascadeType.REMOVE, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.PERSIST},
@@ -69,8 +72,8 @@ protected Trip() {
 }
 
 public Trip(String date, String pickUpLocation, String destination, //SpecificRating specificRating, 
-		String pickUpTime, String arrivalTime, int availableSeats, boolean isComplete, double fare,
-		Integer estimatedTripDuration, int driverRating, int passengerRating, int distance, Driver driver,long identifier, Set<Passenger> passenger) {
+		String pickUpTime, String arrivalTime, Integer availableSeats, Boolean isComplete, Boolean hasStarted, Double fare,
+		Integer estimatedTripDuration, Integer driverRating, Integer passengerRating, Integer distance, Driver driver, Long identifier, Set<Passenger> passenger) {
 	super();
 //	this.specificRating = specificRating;
 	this.date = date;
@@ -80,6 +83,7 @@ public Trip(String date, String pickUpLocation, String destination, //SpecificRa
 	this.arrivalTime = arrivalTime;
 	this.availableSeats = availableSeats;
 	this.isComplete = isComplete;
+	this.hasStarted = hasStarted;
 	this.fare = fare;
 	this.estimatedTripDuration = estimatedTripDuration;
 	this.driverRating = driverRating;
@@ -97,7 +101,7 @@ public void setIdentifier(long value) {
 	this.identifier = value;
 }
 
-public long getIdentifier() {
+public Long getIdentifier() {
 	return this.identifier;
 }
 
@@ -141,11 +145,11 @@ public String getArrivalTime() {
    return this.arrivalTime;
 }
 
-public void setAvailableSeats(int value) {
+public void setAvailableSeats(Integer value) {
    this.availableSeats = value;
 }
 
-public int getAvailableSeats() {
+public Integer getAvailableSeats() {
    return this.availableSeats;
 }
 
@@ -153,15 +157,23 @@ public void setIsComplete(boolean value) {
    this.isComplete = value;
 }
 
-public boolean getIsComplete() {
+public Boolean getIsComplete() {
    return this.isComplete;
 }
 
-public void setFare(double value) {
+public void setHasStarted(Boolean value) {
+	   this.hasStarted = value;
+}
+
+public Boolean getHasStarted() {
+	   return this.hasStarted;
+	}
+
+public void setFare(Double value) {
    this.fare = value;
 }
 
-public double getFare() {
+public Double getFare() {
    return this.fare;
 }
 
@@ -177,19 +189,19 @@ public void setDriverRating(int value) {
    this.driverRating = value;
 }
 
-public int getDriverRating() {
+public Integer getDriverRating() {
    return this.driverRating;
 }
 
-public void setPassengerRating(int value) {
+public void setPassengerRating(Integer value) {
    this.passengerRating = value;
 }
 
-public int getPassengerRating() {
+public Integer getPassengerRating() {
    return this.passengerRating;
 }
 
-public void setDistance(int value) {
+public void setDistance(Integer value) {
    this.distance = value;
 }
 

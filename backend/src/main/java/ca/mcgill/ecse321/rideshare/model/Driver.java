@@ -15,7 +15,7 @@ public class Driver implements Serializable {
 	private String userName;
 	
 	@Column(name= "status")
-	private boolean isActive;
+	private Boolean isActive;
 	
 	@Column(name = "firstName")
 	private String firstName;
@@ -24,7 +24,7 @@ public class Driver implements Serializable {
 	private String lastName;
 	
 	@Column(name = "age")
-	private int age;
+	private Integer age;
 	
 	@Column(name = "email")
 	private String email;
@@ -39,14 +39,21 @@ public class Driver implements Serializable {
 	private String address;
 	
 	@Column(name = "accountNumber")
-	private int accountNumber;
+	private Integer accountNumber;
+	
+	@Column(name = "ranking")
+	private Integer ranking;
+	
+	@Column(name = "tripCounter")
+	private Long tripCounter;
 	
 	
 	protected Driver () {
 	}
 	
-	public Driver(String firstName, String lastName, int age, String email, String phoneNumber, String gender,
-			String address, String userName, boolean isActive, int accountNumber) {
+	public Driver(String firstName, String lastName, Integer age, String email, String phoneNumber, 
+			String gender,String address, String userName, Boolean isActive, Integer accountNumber, 
+			Integer ranking, Long tripCounter) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
@@ -57,6 +64,8 @@ public class Driver implements Serializable {
 		this.userName = userName;
 		this.isActive = isActive;
 		this.accountNumber = accountNumber;
+		this.ranking = ranking;
+		this.tripCounter = tripCounter;
 	}
 
 	public void setFirstName(String value) {
@@ -77,11 +86,11 @@ public class Driver implements Serializable {
 
 	
 
-	public void setAge(int value) {
+	public void setAge(Integer value) {
 		this.age = value;
 	}
 
-	public int getAge() {
+	public Integer getAge() {
 		return this.age;
 	}
 
@@ -136,21 +145,37 @@ public class Driver implements Serializable {
 	}
 
 
-	public boolean isActive() {
+	public Boolean isActive() {
 		return isActive;
 	}
 
 
-	public void setActive(boolean isActive) {
+	public void setActive(Boolean isActive) {
 		this.isActive = isActive;
 	}
 
-	public void setAccountNumber(int value) {
+	public void setAccountNumber(Integer value) {
 		this.accountNumber = value;
 	}
 
-	public int getAccountNumber() {
+	public Integer getAccountNumber() {
 		return this.accountNumber;
+	}
+	
+	public void setRanking(Integer value) {
+		this.ranking = value;
+	}
+	
+	public Integer getRanking() {
+		return this.ranking;
+	}
+	
+	public void setTripCounter(Long tripCounterValue) {
+		this.tripCounter = tripCounterValue;
+	}
+	
+	public Long getTripCounter() {
+		return this.tripCounter;
 	}
 
 }

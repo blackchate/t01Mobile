@@ -56,6 +56,8 @@ public class TripService {
 	
 	@Transactional
 	public void addTrip(Trip trip) {
+		trip.setHasStarted(false);
+		trip.setIsComplete(false);
 		tripRepo.save(trip);
 	}
 	

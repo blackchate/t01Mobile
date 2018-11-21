@@ -31,6 +31,7 @@ public class DriverService {
 	}
 	
 	public void addDriver(Driver driver) {
+		//driver.setRanking(1);
 		driverRepo.save(driver);
 	}
 	
