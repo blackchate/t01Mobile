@@ -10,12 +10,14 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import ca.mcgill.ecse321.rideshare.model.Passenger;
 import ca.mcgill.ecse321.rideshare.model.Trip;
 import ca.mcgill.ecse321.rideshare.repo.TripRepository;
 import ca.mcgill.ecse321.rideshare.repo.PassengerRepository;
 
+@CrossOrigin
 @Service
 @Transactional
 public class TripService {
