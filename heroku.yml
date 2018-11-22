@@ -1,0 +1,12 @@
+setup:
+  addons:
+    - plan: 'heroku-postgresql:hobby-dev'
+      as: DATABASE
+  config: {}
+build:
+  languages:
+    - java
+run:
+  web: >-
+    java -Dserver.port=$PORT $JAVA_OPTS -jar
+    backend/target/rideshare-v1-0.0.1-SNAPSHOT.jar
