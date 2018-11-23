@@ -3,6 +3,7 @@ package ca.mcgill.ecse321.rideshare.tripController;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -54,9 +55,9 @@ public class TripController {
 	@RequestMapping(method=RequestMethod.POST, value="/passengers/{passengerId}/trips")
 	public Trip addTripPassenger(@RequestBody Trip trip, @PathVariable String passengerId) {
 		Passenger passenger = passengerService.getPassenger(passengerId);
-		passenger.setTrip(new HashSet<Trip>() {{
-			add(trip);
-		}});
+		Set<Trip> existingTrips = passenger.getTrip();
+		existingTrips.add(trip);
+		passenger.setTrip(existingTrips);
 		passengerService.updatePassenger(passengerId, passenger);
 		if(trip.getIdentifier() == 0) {
 			tripService.addTrip(trip);
