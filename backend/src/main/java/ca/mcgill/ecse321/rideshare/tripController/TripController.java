@@ -71,7 +71,7 @@ public class TripController {
 		Driver driver = driverService.getDriver(driverId);
 		int age = driver.getAge();
 		int accountNumber = driver.getAccountNumber();
-		int ranking = driver.getRanking();
+		double ranking = driver.getRanking();
 		long tripCounter = driver.getTripCounter();
 		trip.setDriver(new Driver("", "", age, "", "", "",
 			"", driverId, true, accountNumber, ranking, tripCounter));

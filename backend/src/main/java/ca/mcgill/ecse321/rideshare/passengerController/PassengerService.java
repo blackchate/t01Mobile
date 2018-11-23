@@ -46,7 +46,7 @@ public class PassengerService {
 	
 	@Transactional
 	public void addPassenger(Passenger passenger) {
-		passenger.setRanking(1);
+		passenger.setRanking(1.0);
 		passenger.setTripCounter((long) 0);
 		passengerRepo.save(passenger);
 	}

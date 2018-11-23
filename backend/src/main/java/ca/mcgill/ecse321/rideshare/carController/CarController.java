@@ -38,7 +38,7 @@ public class CarController {
 		Driver driver = driverService.getDriver(driverId);
 		int age = driver.getAge();
 		int accountNumber = driver.getAccountNumber();
-		int ranking = driver.getRanking();
+		double ranking = driver.getRanking();
 		long tripCounter = driver.getTripCounter();
 		//This doesn't overwrite the preexisting driver
 		car.setDriver(new Driver("", "", age, "", "", "",
