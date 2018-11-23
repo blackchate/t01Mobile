@@ -42,7 +42,7 @@ public class Driver implements Serializable {
 	private Integer accountNumber;
 	
 	@Column(name = "ranking")
-	private Integer ranking;
+	private Double ranking;
 	
 	@Column(name = "tripCounter")
 	private Long tripCounter;
@@ -53,7 +53,7 @@ public class Driver implements Serializable {
 	
 	public Driver(String firstName, String lastName, Integer age, String email, String phoneNumber, 
 			String gender,String address, String userName, Boolean isActive, Integer accountNumber, 
-			Integer ranking, Long tripCounter) {
+			Double ranking, Long tripCounter) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
@@ -162,11 +162,11 @@ public class Driver implements Serializable {
 		return this.accountNumber;
 	}
 	
-	public void setRanking(Integer value) {
+	public void setRanking(Double value) {
 		this.ranking = value;
 	}
 	
-	public Integer getRanking() {
+	public Double getRanking() {
 		return this.ranking;
 	}
 	

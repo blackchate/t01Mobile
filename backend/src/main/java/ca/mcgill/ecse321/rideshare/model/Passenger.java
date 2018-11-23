@@ -42,7 +42,7 @@ public class Passenger implements Serializable {
 	private String creditCardNumber;
 	
 	@Column(name = "ranking")
-	private Integer ranking;
+	private Double ranking;
 	
 	@Column(name = "tripCounter")
 	private Long tripCounter;
@@ -66,7 +66,7 @@ public class Passenger implements Serializable {
 
 	public Passenger(String firstName, String lastName, Integer age, String email, String phoneNumber, 
 			String gender,String address, String userName, Boolean isActive, String creditCardNumber, 
-			Set<Trip> trips, Integer ranking, Long tripCounter) {
+			Set<Trip> trips, Double ranking, Long tripCounter) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
@@ -194,11 +194,11 @@ public class Passenger implements Serializable {
     return this.trips;
 	}
 	
-	public void setRanking(Integer rankingValue) {
+	public void setRanking(Double rankingValue) {
 		this.ranking = rankingValue;
 	}
 	
-	public Integer getRanking() {
+	public Double getRanking() {
 		return this.ranking;
 	}
 	
