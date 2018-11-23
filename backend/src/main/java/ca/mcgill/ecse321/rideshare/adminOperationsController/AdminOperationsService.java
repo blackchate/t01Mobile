@@ -69,7 +69,7 @@ public class AdminOperationsService {
 		trips = tripService.getAllTrips();
 		for (int i = 0; i < trips.size(); i++) {
 			Trip currentTrip = trips.get(i);
-			if (currentTrip.getHasStarted() == true && currentTrip.getIsComplete() != true){
+			if (currentTrip.getOngoing() == true && currentTrip.getIsComplete() != true){
 				activeTrips.add(currentTrip);
 			}
 		}

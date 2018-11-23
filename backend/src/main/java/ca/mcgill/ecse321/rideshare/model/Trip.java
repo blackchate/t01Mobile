@@ -40,13 +40,13 @@ public class Trip implements Serializable {
 	private Boolean isComplete;
 	
 	@Column(name = "departureStatus")
-	private Boolean hasStarted;
+	private Boolean ongoing;
 	
 	@Column(name = "fare")
 	private Double fare;
 
 	@Column(name = "estimatedTripDuration")
-	private Integer estimatedTripDuration;
+	private String estimatedTripDuration;
 	
 	@Column(name = "driverRating")
 	private Integer driverRating;
@@ -72,8 +72,8 @@ protected Trip() {
 }
 
 public Trip(String date, String pickUpLocation, String destination, //SpecificRating specificRating, 
-		String pickUpTime, String arrivalTime, Integer availableSeats, Boolean isComplete, Boolean hasStarted, Double fare,
-		Integer estimatedTripDuration, Integer driverRating, Integer passengerRating, Integer distance, Driver driver, Long identifier, Set<Passenger> passenger) {
+		String pickUpTime, String arrivalTime, Integer availableSeats, Boolean isComplete, Boolean ongoing, Double fare,
+		String estimatedTripDuration, Integer driverRating, Integer passengerRating, Integer distance, Driver driver, Long identifier, Set<Passenger> passenger) {
 	super();
 //	this.specificRating = specificRating;
 	this.date = date;
@@ -83,7 +83,7 @@ public Trip(String date, String pickUpLocation, String destination, //SpecificRa
 	this.arrivalTime = arrivalTime;
 	this.availableSeats = availableSeats;
 	this.isComplete = isComplete;
-	this.hasStarted = hasStarted;
+	this.ongoing = ongoing;
 	this.fare = fare;
 	this.estimatedTripDuration = estimatedTripDuration;
 	this.driverRating = driverRating;
@@ -161,12 +161,12 @@ public Boolean getIsComplete() {
    return this.isComplete;
 }
 
-public void setHasStarted(Boolean value) {
-	   this.hasStarted = value;
+public void setOngoing(Boolean value) {
+	   this.ongoing = value;
 }
 
-public Boolean getHasStarted() {
-	   return this.hasStarted;
+public Boolean getOngoing() {
+	   return this.ongoing;
 	}
 
 public void setFare(Double value) {
@@ -177,11 +177,11 @@ public Double getFare() {
    return this.fare;
 }
 
-public void setEstimatedTripDuration(Integer value) {
+public void setEstimatedTripDuration(String value) {
    this.estimatedTripDuration = value;
 }
 
-public Integer getEstimatedTripDuration() {
+public String getEstimatedTripDuration() {
    return this.estimatedTripDuration;
 }
 
